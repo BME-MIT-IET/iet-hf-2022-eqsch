@@ -4,7 +4,6 @@ import Model.*;
 import Model.Materials.*;
 import UI.Components.MagicConstants;
 import Utils.Pair;
-import Utils.Point;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -290,19 +289,6 @@ public class MapBuilder {
             default:
                 return null;
         }
-    }
-
-    /**
-     * Generating random Point in the given limits.
-     * @param min value for generating
-     * @param max value for generating
-     * @return a pseudo random Point
-     */
-    private Point genRndPoint( double min, double max) {
-        double x = min + random.nextDouble() * (max - min);
-        double y = min + random.nextDouble() * (max - min);
-
-        return new Point(x,y);
     }
 
     /**

@@ -1,21 +1,21 @@
 Asteroid{
 	UID: 1
-X: @Ignore
-Y: @Ignore
-	Shell: 0
+    X: @Ignore
+    Y: @Ignore
+	Shell: 3
+	Core: 4
 	Ships: 2
-	Core: 3
-	Sector: 4
+ 	Sector: 3
 }
 PlayerShip{
 	UID: 2
 	Asteroid: 1
 }
-Coal{
-	UID: 3
-}
 Sector{
-	UID: 4
+	UID: 3
 	Fields: 1
 	isClose: false
+}
+Coal{
+    UID: 4
 }
