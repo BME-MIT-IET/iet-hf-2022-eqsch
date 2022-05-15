@@ -50,9 +50,10 @@ public class TestRunner {
      * This method run all the tests we have
      * @param gc
      */
-    public void RunAllTests(GameController gc){
+    public boolean RunAllTests(GameController gc){
         File[] files = TestDir.listFiles();
         String oldCurr = gc.CurrentWorkingDirectory;
+        boolean ret = true;
         int SuccessfulTests = 0;
         for(File f : files){
             if(f.isDirectory()) {
@@ -67,12 +68,15 @@ public class TestRunner {
                     }
                     catch (InvalidCommand invalidCommand) {
                         System.out.println("\u001B[31m" + invalidCommand.getMessage() + "\u001B[0m");
+                        ret = false;
                     }
                     catch (BadFileFormat badFileFormat) {
                         System.out.println("\u001B[31m" + badFileFormat.getMessage() + "\u001B[0m");
+                        ret = false;
                     }
                     catch (AssertException e){
                         System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
+                        ret = false;
                     }
                     System.out.println("Test[" + f.getName() + "] Done");
                 }
@@ -87,6 +91,7 @@ public class TestRunner {
         }
         System.out.println(SuccessfulTests + " tests were successful out of " + DirNum);
         gc.CurrentWorkingDirectory = oldCurr;
+        return ret;
     }
 
     public void RunTest(String Test,GameController gc){

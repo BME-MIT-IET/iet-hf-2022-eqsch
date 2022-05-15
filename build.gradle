@@ -15,6 +15,7 @@ dependencies {
     implementation "org.openjfx:javafx-controls:${javaFXVersion}:${javaFXPlatform}"
     implementation "org.openjfx:javafx-graphics:${javaFXVersion}:${javaFXPlatform}"
     implementation "org.openjfx:javafx-fxml:${javaFXVersion}:${javaFXPlatform}"
+    implementation 'junit:junit:4.12'
 }
 
 sourceSets {
