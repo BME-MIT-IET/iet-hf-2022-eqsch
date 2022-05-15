@@ -1,0 +1,28 @@
+Asteroid{
+	UID: 1
+    X: @Ignore
+
+    Y: @Ignore
+	Neighbours: 2
+	Shell: 2
+	Sector: 4
+}
+Asteroid{
+	UID: 2
+	X: @Ignore
+
+    Y: @Ignore
+	Neighbours: 1
+	Shell: 2
+	Ships: 3
+	Sector: 4
+}
+UFO{
+	UID: 3
+	Asteroid: 2
+}
+Sector{
+	UID: 4
+	Fields: 1, 2
+	isClose: false
+}

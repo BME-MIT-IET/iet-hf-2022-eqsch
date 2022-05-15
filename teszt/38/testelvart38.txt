@@ -1,0 +1,31 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Neighbours: 2
+	Shell: 2
+	Sector: 4
+}
+Asteroid{
+	UID: 2
+	X: @Ignore
+
+    Y: @Ignore
+	Neighbours: 1, 3
+	Shell: 2
+	Sector: 4
+}
+TeleportGate{
+	UID: 3
+	X: @Ignore
+
+    Y: @Ignore
+	Neighbours: 2
+	Sector: 4
+	WasHitBySunStorm: true
+}
+Sector{
+	UID: 4
+	Fields: 1, 2, 3
+	isClose: false
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@loadmenu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="220.0" prefWidth="1920.0" />
+            <HBox alignment="CENTER" prefHeight="77.0" prefWidth="1920.0">
+               <children>
+                  <Label fx:id="Save_label" alignment="CENTER" prefHeight="77.0" prefWidth="482.0" styleClass="save" stylesheets="@loadmenu.css">
+                     <font>
+                        <Font name="Comic Sans MS" size="36.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="170.0" prefWidth="1920.0" spacing="200.0">
+               <children>
+                  <Button fx:id="Left_button" mnemonicParsing="false" onAction="#Left" prefHeight="83.0" prefWidth="72.0" styleClass="left" stylesheets="@loadmenu.css" textFill="TRANSPARENT" />
+                  <Button fx:id="Right_button" mnemonicParsing="false" onAction="#Right" prefHeight="83.0" prefWidth="72.0" styleClass="right" stylesheets="@loadmenu.css" textFill="TRANSPARENT" />
+               </children>
+            </HBox>
+            <Pane prefHeight="250.0" prefWidth="1920.0" />
+            <HBox alignment="BOTTOM_CENTER" prefHeight="110.0" prefWidth="600.0" spacing="1000.0">
+               <children>
+                  <Button fx:id="Back_button" mnemonicParsing="false" onAction="#Back" prefHeight="77" prefWidth="164" styleClass="back" stylesheets="@loadmenu.css" textFill="TRANSPARENT" />
+                  <Button fx:id="Load_button" mnemonicParsing="false" onAction="#Load" prefHeight="77" prefWidth="179" styleClass="load" stylesheets="@loadmenu.css" textFill="TRANSPARENT" />
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

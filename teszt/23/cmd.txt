@@ -1,0 +1,5 @@
+load test_23.txt 
+controller off
+p 2 build_base
+save testdone23.txt
+compare testdone23.txt testelvart23.txt

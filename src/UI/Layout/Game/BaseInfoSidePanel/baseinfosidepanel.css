@@ -1,0 +1,4 @@
+.infopanel{
+    -fx-background-image:url('Resources/base_panel.png');
+    -fx-background-size: 100% 100%
+}

@@ -1,14 +1,1 @@
-lib
-build
-.idea
-.DS_Store
-
-*.iml
-*.ipr
-*.iws
-
-gradle.properties
-
-.gradle
-
-*.bak
+/out

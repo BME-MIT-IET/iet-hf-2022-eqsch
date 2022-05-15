@@ -1,0 +1,17 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Shell: 0
+	Ships: 2
+	Sector: 4
+}
+PlayerShip{
+	UID: 2
+	Asteroid: 1
+}
+Sector{
+	UID: 4
+	Fields: 1
+	isClose: true
+}

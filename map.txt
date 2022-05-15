@@ -1,0 +1,149 @@
+Asteroid{
+	UID: 1
+	Neighbours: 2, 12
+	Shell: 1
+	Ships: 13, 14
+	Core: 17
+	Sector: 29
+}
+Asteroid{
+	UID: 2
+	Neighbours: 1, 3
+	Shell: 1
+	Core: 18
+	Sector: 29
+}
+Asteroid{
+	UID: 3
+	Neighbours: 2, 4
+	Shell: 1
+	Core: 19
+	Sector: 29
+}
+Asteroid{
+	UID: 4
+	Neighbours: 3, 5
+	Shell: 1
+	Core: 20
+	Sector: 29
+}
+Asteroid{
+	UID: 5
+	Neighbours: 4, 6
+	Shell: 1
+	Core: 21
+	Sector: 29
+}
+Asteroid{
+	UID: 6
+	Neighbours: 5, 7
+	Shell: 1
+	Core: 22
+	Sector: 29
+}
+Asteroid{
+	UID: 7
+	Neighbours: 6, 8
+	Shell: 1
+	Core: 23
+	Sector: 29
+}
+Asteroid{
+	UID: 8
+	Neighbours: 7, 9
+	Shell: 1
+	Core: 24
+	Sector: 29
+}
+Asteroid{
+	UID: 9
+	Neighbours: 8, 10
+	Shell: 1
+	Core: 25
+	Sector: 29
+}
+Asteroid{
+	UID: 10
+	Neighbours: 9, 11
+	Shell: 1
+	Core: 26
+	Sector: 29
+}
+Asteroid{
+	UID: 11
+	Neighbours: 10, 12
+	Shell: 1
+	Core: 27
+	Sector: 29
+}
+Asteroid{
+	UID: 12
+	Neighbours: 1, 11
+	Shell: 1
+	Ships: 15, 16
+	Core: 28
+	Sector: 29
+}
+RobotShip{
+	UID: 13
+	Asteroid: 1
+}
+PlayerShip{
+	UID: 14
+	Asteroid: 1
+}
+RobotShip{
+	UID: 15
+	Asteroid: 12
+}
+PlayerShip{
+	UID: 16
+	Asteroid: 12
+}
+Coal{
+	UID: 17
+}
+Coal{
+	UID: 18
+}
+Coal{
+	UID: 19
+}
+Ice{
+	UID: 20
+}
+Ice{
+	UID: 21
+}
+Ice{
+	UID: 22
+}
+Iron{
+	UID: 23
+}
+Iron{
+	UID: 24
+}
+Iron{
+	UID: 25
+}
+Uranium{
+	UID: 26
+	ExposedFor: 0
+	isExposed: false
+}
+Uranium{
+	UID: 27
+	ExposedFor: 0
+	isExposed: false
+}
+Uranium{
+ 	UID: 28
+	ExposedFor: 0
+	isExposed: false
+}
+Sector{
+	UID: 29
+	Fields: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+	isClose: false
+}

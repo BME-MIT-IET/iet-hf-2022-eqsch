@@ -1,0 +1,65 @@
+Asteroid{
+	UID
+	Neighbours
+	Shell
+	Ships
+	Core
+	Base
+	Sector
+}
+
+TeleportGate{
+	UID
+	Pair
+	Neighbours
+	Sector
+	WasHitBySunStorm
+}
+
+Base{
+	UID
+	Materials
+}
+
+Ice{
+	UID
+}
+
+Uranium{
+	UID
+	ExposedFor
+	isExposed
+}
+
+Iron{
+	UID
+}
+
+Coal{
+	UID
+}
+
+RobotShip{
+	UID
+	Asteroid
+}
+
+PlayerShip{
+	UID
+	Asteroid
+	Teleports
+	Materials
+	
+}
+
+UFO{
+	UID
+	Asteroid
+	Materials
+}
+
+Sector{
+	UID
+	Fields
+	isClose
+}

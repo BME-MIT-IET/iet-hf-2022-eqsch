@@ -1,0 +1,5 @@
+load test_52.txt
+controller off
+sunStorm 5
+save testdone52.txt
+compare testdone52.txt testelvart52.txt

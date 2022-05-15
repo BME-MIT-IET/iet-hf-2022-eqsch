@@ -1,0 +1,21 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Shell: 1
+	Ships: 2
+	Core: 3
+	Sector: 4
+}
+RobotShip{
+	UID: 2
+	Asteroid: 1
+}
+Ice{
+	UID: 3
+}
+Sector{
+	UID: 4
+	Fields: 1
+	isClose: true
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@game.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="GameContent" onMouseEntered="#UnstuckSelect" prefHeight="200.0" prefWidth="200.0" stylesheets="@game.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button fx:id="OptionsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SwitchToOptionsSidePanel" prefHeight="103.0" prefWidth="103.0" styleClass="optionsbutton" stylesheets="@game.css" textFill="TRANSPARENT" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Pane fx:id="InventoryWrapper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="143.0" prefWidth="406.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <Pane fx:id="InfoWrapper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="210.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="183.0" />
+      <Pane fx:id="BaseInfoSidePanelWrapper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="209.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="183.0" />
+      <Pane fx:id="SidePanelWrapper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="339.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+      <VBox fx:id="NotificationVBox" alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="132.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+load test_10.txt 
+controller off
+p 2 craft teleports
+save testdone10.txt
+compare testdone10.txt testelvart10.txt

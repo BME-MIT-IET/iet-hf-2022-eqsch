@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="340.0" spacing="15.0" styleClass="putdownpanel" stylesheets="@putdownsidepanel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="Teleport1Button" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#Teleport1" prefHeight="61.0" prefWidth="253.0" styleClass="teleport1button" stylesheets="@putdownsidepanel.css">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Teleport2Button" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#Teleport2" prefHeight="61.0" prefWidth="253.0" styleClass="teleport2button" stylesheets="@putdownsidepanel.css">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="40.0" top="40.0" />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="Teleport3Button" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#Teleport3" prefHeight="61.0" prefWidth="253.0" styleClass="teleport3button" stylesheets="@putdownsidepanel.css">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#Cancel" prefHeight="61.0" prefWidth="218.0" styleClass="cancelbutton" stylesheets="@putdownsidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets top="80.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>

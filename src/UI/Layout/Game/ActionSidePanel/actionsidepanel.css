@@ -1,0 +1,39 @@
+.actionpanel {
+    -fx-background-image:url('Resources/actionpanel.png');
+    -fx-background-size: 100% 100%
+}
+
+.drillbutton {
+    -fx-background-image:url('Resources/drill.png');
+    -fx-background-size: 100% 100%
+}
+
+.buildbutton {
+    -fx-background-image:url('Resources/build.png');
+    -fx-background-size: 100% 100%
+}
+
+.minebutton {
+    -fx-background-image:url('Resources/mine.png');
+    -fx-background-size: 100% 100%
+}
+
+.craftbutton {
+    -fx-background-image:url('Resources/craft.png');
+    -fx-background-size: 100% 100%
+}
+
+.putdownbutton {
+    -fx-background-image:url('Resources/put_down.png');
+    -fx-background-size: 100% 100%
+}
+
+.putbackbutton {
+    -fx-background-image:url('Resources/put_back.png');
+    -fx-background-size: 100% 100%
+}
+
+.skipbutton {
+    -fx-background-image:url('Resources/skip.png');
+    -fx-background-size: 100% 100%;
+}

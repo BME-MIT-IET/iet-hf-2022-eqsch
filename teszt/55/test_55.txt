@@ -1,0 +1,45 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Neighbours: 2, 3
+	Shell: 1
+	Ships: 5
+	Core: 7
+	Sector: 8
+}
+Asteroid{
+	UID: 2
+	Neighbours: 1, 3
+	Shell: 1
+	Ships: 4
+	Core: 6
+	Sector: 8
+}
+Asteroid{
+	UID: 3
+	Shell: 10
+	Neighbours: 1, 2
+	Sector: 8
+}
+PlayerShip{
+	UID: 4
+	Asteroid: 2
+}
+RobotShip{
+	UID: 5
+	Asteroid: 1
+}
+Ice{
+	UID: 6
+}
+Uranium{
+	UID: 7
+	ExposedFor: 0
+	isExposed: false
+}
+Sector{
+	UID: 8
+	Fields: 1, 2, 3
+	isClose: true
+}

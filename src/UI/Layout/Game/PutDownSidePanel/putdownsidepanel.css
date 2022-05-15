@@ -1,0 +1,24 @@
+.putdownpanel {
+    -fx-background-image:url('Resources/put_down_panel.png');
+    -fx-background-size: 100% 100%
+}
+
+.teleport1button {
+    -fx-background-image:url('Resources/teleport_1_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.teleport2button {
+    -fx-background-image:url('Resources/teleport_2_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.teleport3button {
+    -fx-background-image:url('Resources/teleport_3_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.cancelbutton {
+    -fx-background-image:url('Resources/cancel_button.png');
+    -fx-background-size: 100% 100%
+}

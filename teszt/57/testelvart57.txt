@@ -1,0 +1,84 @@
+Asteroid{
+	UID: 1
+    X: @Ignore
+    Y: @Ignore
+	Neighbours: 2,7
+	Shell: 0
+	Sector: 11
+}
+Asteroid{
+	UID: 2
+	X: @Ignore
+    Y: @Ignore
+	Neighbours: 1,3,9
+	Shell: 5
+	Sector: 11
+}
+Asteroid{
+	UID: 3
+    X: @Ignore
+    Y: @Ignore
+	Neighbours: 2,8
+	Shell: 0
+	Ships: 4,5
+	Core: 6
+	Sector: 12
+}
+PlayerShip{
+	UID: 4
+	Asteroid: 3
+	Teleports: 10
+}
+RobotShip{
+	UID: 5
+	Asteroid: 3
+}
+Uranium{
+	UID: 6
+	ExposedFor: 2
+	isExposed: true
+}
+TeleportGate{
+	UID: 7
+    X: @Ignore
+    Y: @Ignore
+	Pair: 8
+	Neighbours: 1
+	Sector: 11
+	WasHitBySunStorm: false
+}
+TeleportGate{
+	UID: 8
+    X: @Ignore
+    Y: @Ignore
+	Pair: 7
+	Neighbours: 3
+	Sector: 11
+	WasHitBySunStorm: false
+}
+TeleportGate{
+	UID: 9
+    X: @Ignore
+    Y: @Ignore
+	Pair: 10
+	Neighbours: 2
+	Sector: 11
+	WasHitBySunStorm: false
+}
+TeleportGate{
+	UID: 10
+    X: @Ignore
+    Y: @Ignore
+	Pair: 9
+	WasHitBySunStorm: false
+}
+Sector{
+	UID: 11
+	Fields: 1, 2, 7, 8, 9
+	isClose: false
+}
+Sector{
+	UID: 12
+	Fields: 3
+	isClose: true
+}

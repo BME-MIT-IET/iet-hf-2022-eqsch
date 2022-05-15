@@ -1,0 +1,40 @@
+.anchor {
+    -fx-background-image:url('Resources/background.png');
+    -fx-background-size: 100% 100%
+}
+
+.optionsbutton{
+    -fx-background-image:url('Resources/options_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.panetest{
+    -fx-border-color: #ff0000;
+    -fx-border-width: 3;
+    -fx-background-radius: 3;
+    -fx-background-color: red;
+}
+
+.msg{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Courier New";
+    -fx-base: rgba(0,255,255,255);
+    -fx-background: rgba(255, 255, 255, 0);
+    -fx-text-fill: rgba(0,200,255,255)
+}
+
+.error{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Courier New";
+    -fx-base: rgb(255, 0, 0);
+    -fx-background: rgba(0, 0, 0, 0);
+    -fx-text-fill: rgba(255,0,0,255)
+}
+
+.warning{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Courier New";
+    -fx-base: rgb(255, 255, 0);
+    -fx-background: rgba(0, 0, 0, 0);
+    -fx-text-fill: rgba(255,255,0,255)
+}
