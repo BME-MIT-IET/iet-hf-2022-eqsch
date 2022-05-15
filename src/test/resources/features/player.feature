@@ -36,13 +36,13 @@ Feature: Player
     When Player mines
     Then Player should have mined nothing
 
-    Scenario: Player drills and Asteroid has more than 0 shell
-      Given I have a player
-      And I have an asteroid
-      And Asteroid has more than 0 shells
-      And Player stands on asteroid
-      When Player drills
-      Then Asteroid should have less shells
+  Scenario: Player drills and Asteroid has more than 0 shell
+    Given I have a player
+    And I have an asteroid
+    And Asteroid has more than 0 shells
+    And Player stands on asteroid
+    When Player drills
+    Then Asteroid should have less shells
 
   Scenario: Player drills and Asteroid has 0 shell
     Given I have a player
@@ -61,7 +61,7 @@ Feature: Player
     And Player stands on asteroid
     When Player drills
     Then Asteroid should have less shells
-    And Uranium has been exposed one more time
+    Then Uranium has been exposed one more time
 
   Scenario: Player drills and Asteroid has an ice core and one shell
     Given I have a player
