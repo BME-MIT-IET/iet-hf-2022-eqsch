@@ -30,7 +30,11 @@ jobs:
         distribution: 'temurin'
     - name: Grant Permissions to gradlew
       run: chmod +x gradlew
-  gradle:
+    - name: Setup and execute Gradle 'build' task
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -39,6 +43,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      - name: Grant Permissions to gradlew
+        run: chmod +x gradlew
       - name: Setup and execute Gradle 'test' task
         uses: gradle/gradle-build-action@v2
         with:
