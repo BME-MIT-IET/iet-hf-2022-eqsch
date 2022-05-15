@@ -13,7 +13,7 @@ public class PlayerTests {
         GameController gc = new GameController();
         FileController fc = new FileController();
 
-        gc.InterpretCommand("load \\src\\test\\resources\\playerDrillsAndMines_load.txt");
+        gc.InterpretCommand("load /src/test/resources/playerDrillsAndMines_load.txt");
 
 
 
@@ -21,10 +21,10 @@ public class PlayerTests {
             gc.InterpretCommand("p 2 drill");
         }
         gc.InterpretCommand("p 2 mine");
-        gc.InterpretCommand("save \\src\\test\\resources\\playerDrillsAndMines_save.txt");
+        gc.InterpretCommand("save /src/test/resources/playerDrillsAndMines_save.txt");
 
-        File e = new File(dir + "\\src\\test\\resources\\playerDrillsAndMines_check.txt");
-        File r = new File(dir + "\\src\\test\\resources\\playerDrillsAndMines_save.txt");
+        File e = new File(dir + "/src/test/resources/playerDrillsAndMines_check.txt");
+        File r = new File(dir + "/src/test/resources/playerDrillsAndMines_save.txt");
 
         boolean res;
         try{
