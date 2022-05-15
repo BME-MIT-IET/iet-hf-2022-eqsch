@@ -37,7 +37,7 @@ public class TestRunner {
      * @throws Exception
      */
     void Run(File Test,GameController gc) throws Exception {
-        File cmd = new File(Test.getCanonicalPath() + "\\cmd.txt");
+        File cmd = new File(Test.getCanonicalPath() + "/cmd.txt");
         Scanner FScanner = new Scanner(cmd);
         while (FScanner.hasNextLine()) {
             String data = FScanner.nextLine();
@@ -82,10 +82,14 @@ public class TestRunner {
                 }
                 catch (IOException e) {
                     System.out.println("Invalid Test Directory in Test Root. Invalid Dir: " + f.getName());
+                    System.out.println("MSG:" + e.getMessage());
+                    e.printStackTrace();
+                    ret = false;
                 }
                 catch (Exception e) {
                     e.printStackTrace();
                     System.out.println(e.getMessage());
+                    ret = false;
                 }
             }
         }

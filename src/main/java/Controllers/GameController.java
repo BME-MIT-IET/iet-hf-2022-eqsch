@@ -95,11 +95,11 @@ public class GameController {
         }
         else if (parts[0].equals("save")){
             FileController fc = new FileController();
-            fc.Save(new File(CurrentWorkingDirectory + "\\" + parts[1]),map,this);
+            fc.Save(new File(CurrentWorkingDirectory + "/" + parts[1]),map,this);
         }
         else if(parts[0].equals("load")){
             FileController fc = new FileController();
-            map = fc.Load(new File(CurrentWorkingDirectory + "\\" + parts[1]),this);
+            map = fc.Load(new File(CurrentWorkingDirectory + "/" + parts[1]),this);
         }
         else if(parts[0].equals("controller")){
             controller = Boolean.parseBoolean(parts[1]);
@@ -179,7 +179,7 @@ public class GameController {
         }
         else if(parts[0].equals("compare")){
             FileController fc = new FileController();
-            fc.Compare(new File(CurrentWorkingDirectory + "\\" + parts[1]),new File(CurrentWorkingDirectory + "\\" + parts[2]));
+            fc.Compare(new File(CurrentWorkingDirectory + "/" + parts[1]),new File(CurrentWorkingDirectory + "/" + parts[2]));
         }
         else{
             if(parts.length < 3){
