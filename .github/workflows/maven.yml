@@ -13,6 +13,6 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
       - name: Build with Gradle
-        run: ./gradlew build
+        run: chmod +x ./gradlew build
       - name: Run the Gradle test task
         run: ./gradlew test
