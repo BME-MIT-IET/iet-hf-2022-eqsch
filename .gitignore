@@ -1,3 +1,4 @@
 # Default ignored files
 /.gradle
 /build
+/src/test/resources/*_save.txt

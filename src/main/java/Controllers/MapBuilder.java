@@ -4,7 +4,6 @@ import Model.*;
 import Model.Materials.*;
 import UI.Components.MagicConstants;
 import Utils.Pair;
-import Utils.Point;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -182,13 +181,6 @@ public class MapBuilder {
             s.Add(a);
         }
 
-//        // creating players on random asteroid
-//        for (int i = 0; i < 1; i++) {
-//            PlayerShip p = new PlayerShip(asteroids.get(random.nextInt(asteroids.size())));
-//            GC.ps.add(p);
-//        }
-
-
         // creating UFOs on random asteroid
         for (int i = 0; i < MagicConstants.shipNumber; i++) {
             UFO p = new UFO(asteroids.get(random.nextInt(asteroids.size())));
@@ -258,19 +250,6 @@ public class MapBuilder {
     }
 
     /**
-     * Generating random Material which is not the given param
-     * @return the sector which should be ignored
-     */
-    private Sector genRndSector(Sector s){
-        while(true){
-            Sector rndSector = map.getSectors().get(random.nextInt(map.getSectors().size()));
-            if(s == rndSector)
-                continue;
-            return rndSector;
-        }
-    }
-
-    /**
      * Generating random Material and setting new UID for that.
      * @return random Material instance
      */
@@ -290,19 +269,6 @@ public class MapBuilder {
             default:
                 return null;
         }
-    }
-
-    /**
-     * Generating random Point in the given limits.
-     * @param min value for generating
-     * @param max value for generating
-     * @return a pseudo random Point
-     */
-    private Point genRndPoint( double min, double max) {
-        double x = min + random.nextDouble() * (max - min);
-        double y = min + random.nextDouble() * (max - min);
-
-        return new Point(x,y);
     }
 
     /**
