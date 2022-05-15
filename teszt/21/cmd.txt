@@ -1,0 +1,5 @@
+load test_21.txt 
+controller off
+p 2 put_back 3
+save testdone21.txt
+compare testdone21.txt testelvart21.txt

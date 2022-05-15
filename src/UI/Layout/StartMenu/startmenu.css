@@ -1,0 +1,69 @@
+.anchor{
+    -fx-background-image:url('Resources/BG.png');
+    -fx-background-size: 100% 100%;
+}
+
+.back{
+    -fx-background-image:url('Resources/back_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.start{
+    -fx-background-image:url('Resources/start_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.mapType{
+    -fx-background-image:url('Resources/map_type.png');
+    -fx-background-size: 100% 100%;
+}
+
+.small{
+    -fx-background-image:url('Resources/small_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.normal{
+    -fx-background-image:url('Resources/normal_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.large{
+    -fx-background-image:url('Resources/large_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.players{
+    -fx-background-image:url('Resources/players.png');
+    -fx-background-size: 100% 100%;
+}
+
+.counter{
+    -fx-background-image:url('Resources/counter.png');
+    -fx-background-size: 100% 100%;
+    -fx-highlight-fill: rgba(0, 0, 0, 0);
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-highlight-text-fill: rgba(0, 0, 0, 0);
+    -fx-border-color: rgba(0, 0, 0, 0);
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.fileName{
+    -fx-background-image:url('Resources/file_name_panel.png');
+    -fx-background-size: 100% 100%;
+}
+
+.fileName_in{
+    -fx-background-image:url('Resources/file_name_in.png');
+    -fx-background-size: 100% 100%;
+    -fx-highlight-fill: rgba(0, 0, 0, 0);
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-highlight-text-fill: rgba(0, 0, 0, 0);
+    -fx-border-color: rgba(0, 0, 0, 0);
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(0, 0, 0, 0);
+}

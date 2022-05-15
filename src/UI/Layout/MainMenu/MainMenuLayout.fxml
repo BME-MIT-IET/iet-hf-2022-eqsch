@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Anchor" prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@mainmenu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="-1.0" layoutY="41.0" prefHeight="200.0" prefWidth="351.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="90.0" prefWidth="1920.0" />
+            <HBox alignment="CENTER" prefHeight="187.0" prefWidth="1920.0" spacing="80.0">
+               <children>
+                  <Button fx:id="Start_button" mnemonicParsing="false" onAction="#Start" prefHeight="73" prefWidth="335" styleClass="start" stylesheets="@mainmenu.css" textFill="TRANSPARENT" />
+                  <Button fx:id="Load_button" mnemonicParsing="false" onAction="#Load" prefHeight="73" prefWidth="335" styleClass="load" stylesheets="@mainmenu.css" textFill="TRANSPARENT" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="Exit_button" mnemonicParsing="false" onAction="#Exit" prefHeight="73" prefWidth="335" styleClass="exit" stylesheets="@mainmenu.css" textFill="TRANSPARENT" />
+               </children>
+            </HBox>
+            <Pane prefHeight="265.0" prefWidth="1920.0" />
+         </children></VBox>
+   </children>
+</AnchorPane>

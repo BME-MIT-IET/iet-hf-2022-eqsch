@@ -1,0 +1,19 @@
+.anchor{
+    -fx-background-image:url('Resources/BG.png');
+    -fx-background-size: 100% 100%;
+}
+
+.over{
+    -fx-background-image:url('Resources/game_over.png');
+    -fx-background-size: 100% 100%;
+}
+
+.exit{
+    -fx-background-image:url('Resources/exit.png');
+    -fx-background-size: 100% 100%;
+}
+
+.restart{
+    -fx-background-image:url('Resources/restart.png');
+    -fx-background-size: 100% 100%;
+}

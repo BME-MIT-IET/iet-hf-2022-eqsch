@@ -1,0 +1,5 @@
+load test_29.txt 
+controller off
+p 2 drill
+save testdone29.txt
+compare testdone29.txt testelvart29.txt

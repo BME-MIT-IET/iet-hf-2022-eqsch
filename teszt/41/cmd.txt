@@ -1,0 +1,5 @@
+load test_41.txt 
+controller off
+@Fail u 2 move 4
+save testdone41.txt
+compare testdone41.txt testelvart41.txt

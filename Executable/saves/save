@@ -1,0 +1,1063 @@
+Sector{
+UID: 2
+Fields: 14,44,56,58,74,110,164
+isClose: false
+}
+Asteroid{
+UID: 14
+X: 0.7859597770826136
+Y: 0.47740764518124834
+Sector: 2
+Neighbours: 56,110
+Shell: 9
+Core:15
+}
+Uranium{
+UID: 15
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 44
+X: 1.1123517637489697
+Y: 0.20909506188287968
+Sector: 2
+Neighbours: 74,164
+Shell: 5
+Core:45
+}
+Coal{
+UID: 45
+}
+Asteroid{
+UID: 56
+X: 0.7344864982257446
+Y: 0.2204400091376916
+Sector: 2
+Neighbours: 14,74
+Shell: 7
+Core:57
+}
+Iron{
+UID: 57
+}
+Asteroid{
+UID: 58
+X: 0.32194894607435875
+Y: 0.15270317714833234
+Sector: 2
+Neighbours: 16,118
+Shell: 9
+Core:59
+}
+Iron{
+UID: 59
+}
+Asteroid{
+UID: 74
+X: 0.907691218798824
+Y: 0.1434941821129209
+Sector: 2
+Neighbours: 44,56
+Shell: 4
+Core:75
+}
+Uranium{
+UID: 75
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 110
+X: 0.5905048618293544
+Y: 0.47362821031305236
+Sector: 2
+Neighbours: 14,82
+Shell: 6
+Ships: 1
+Core:111
+}
+Iron{
+UID: 111
+}
+PlayerShip{
+UID: 1
+Asteroid: 110
+}
+Asteroid{
+UID: 164
+X: 1.333772350776095
+Y: 0.6850967667539991
+Sector: 2
+Neighbours: 44
+Shell: 9
+Core:165
+}
+Iron{
+UID: 165
+}
+Sector{
+UID: 3
+Fields: 16,20,54,60,82,90,102,150
+isClose: false
+}
+Asteroid{
+UID: 16
+X: 0.24786880363440056
+Y: 0.31069160980043337
+Sector: 3
+Neighbours: 58,90
+Shell: 8
+Core:17
+}
+Iron{
+UID: 17
+}
+Asteroid{
+UID: 20
+X: 0.7091622933344852
+Y: 1.191983767739848
+Sector: 3
+Neighbours: 54
+Shell: 6
+Core:21
+}
+Ice{
+UID: 21
+}
+Asteroid{
+UID: 54
+X: 0.7897433742701121
+Y: 0.93212274724511
+Sector: 3
+Neighbours: 20,150
+Shell: 4
+Core:55
+}
+Uranium{
+UID: 55
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 60
+X: 0.2527626324930496
+Y: 0.8735122936683468
+Sector: 3
+Neighbours: 90,150
+Shell: 7
+Core:61
+}
+Uranium{
+UID: 61
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 82
+X: 0.4817751526659251
+Y: 0.6453162242397736
+Sector: 3
+Neighbours: 90,110
+Shell: 8
+Core:83
+}
+Iron{
+UID: 83
+}
+Asteroid{
+UID: 90
+X: 0.31736144524348925
+Y: 0.6633986829059395
+Sector: 3
+Neighbours: 16,60,82
+Shell: 9
+Core:91
+}
+Uranium{
+UID: 91
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 102
+X: 0.1140860094140168
+Y: 1.2453053059571844
+Sector: 3
+Neighbours: 124
+Shell: 8
+Core:103
+}
+Uranium{
+UID: 103
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 150
+X: 0.4427832836351274
+Y: 0.9326933036775655
+Sector: 3
+Neighbours: 54,60
+Shell: 6
+Core:151
+}
+Iron{
+UID: 151
+}
+Sector{
+UID: 4
+Fields: 38,68,78,92,94,104,114,116,120,124,142,148
+isClose: false
+}
+Asteroid{
+UID: 38
+X: -0.9868535409105349
+Y: 1.0868360066730902
+Sector: 4
+Neighbours: 68
+Shell: 7
+Ships: 170
+Core:39
+}
+Iron{
+UID: 39
+}
+UFO{
+UID: 170
+Asteroid: 38
+}
+Asteroid{
+UID: 68
+X: -0.8016429717862549
+Y: 0.9780874518247694
+Sector: 4
+Neighbours: 38,106,116
+Shell: 9
+Core:69
+}
+Iron{
+UID: 69
+}
+Asteroid{
+UID: 78
+X: -0.4294757646756208
+Y: 0.9753922520931998
+Sector: 4
+Neighbours: 116,148
+Shell: 9
+Core:79
+}
+Iron{
+UID: 79
+}
+Asteroid{
+UID: 92
+X: -0.3032356243456655
+Y: 1.3430495349631457
+Sector: 4
+Neighbours: 124,148
+Shell: 9
+Core:93
+}
+Uranium{
+UID: 93
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 94
+X: -0.23781765492663756
+Y: 0.28801716700265273
+Sector: 4
+Neighbours: 34,114,130,142
+Shell: 4
+Core:95
+}
+Coal{
+UID: 95
+}
+Asteroid{
+UID: 104
+X: -0.14087347854542223
+Y: 0.7117585856934048
+Sector: 4
+Neighbours: 114
+Shell: 8
+Core:105
+}
+Uranium{
+UID: 105
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 114
+X: -0.08927801348636817
+Y: 0.4124923117240203
+Sector: 4
+Neighbours: 94,104,142
+Shell: 7
+Core:115
+}
+Coal{
+UID: 115
+}
+Asteroid{
+UID: 116
+X: -0.5406914381009839
+Y: 0.8622324005512906
+Sector: 4
+Neighbours: 68,78,100
+Shell: 4
+Core:117
+}
+Iron{
+UID: 117
+}
+Asteroid{
+UID: 120
+X: -0.08595725126111223
+Y: 1.0518937164422932
+Sector: 4
+Neighbours: 124
+Shell: 5
+Core:121
+}
+Ice{
+UID: 121
+}
+Asteroid{
+UID: 124
+X: -0.07391287766167183
+Y: 1.2965445844705619
+Sector: 4
+Neighbours: 92,102,120
+Shell: 8
+Core:125
+}
+Coal{
+UID: 125
+}
+Asteroid{
+UID: 142
+X: -0.1272885968602191
+Y: 0.17475237782427985
+Sector: 4
+Neighbours: 34,94,114
+Shell: 5
+Core:143
+}
+Uranium{
+UID: 143
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 148
+X: -0.4168616293637153
+Y: 1.2094853599817625
+Sector: 4
+Neighbours: 78,92
+Shell: 8
+Core:149
+}
+Ice{
+UID: 149
+}
+Sector{
+UID: 5
+Fields: 34,46,52,98,100,106,112,126,130,134,138,158
+isClose: false
+}
+Asteroid{
+UID: 34
+X: -0.27337717578240067
+Y: 0.09378990914185337
+Sector: 5
+Neighbours: 94,96,130,142
+Shell: 6
+Core:35
+}
+Coal{
+UID: 35
+}
+Asteroid{
+UID: 46
+X: -0.9218289000556574
+Y: 0.25923301742733573
+Sector: 5
+Neighbours: 112,126,134
+Shell: 6
+Core:47
+}
+Coal{
+UID: 47
+}
+Asteroid{
+UID: 52
+X: -1.306749663557258
+Y: 0.24971068485643685
+Sector: 5
+Neighbours: 126
+Shell: 4
+Core:53
+}
+Coal{
+UID: 53
+}
+Asteroid{
+UID: 98
+X: -0.4880861969821569
+Y: 0.41143308759855485
+Sector: 5
+Neighbours: 112,130
+Shell: 8
+Core:99
+}
+Coal{
+UID: 99
+}
+Asteroid{
+UID: 100
+X: -0.6769276259830677
+Y: 0.5903119553397144
+Sector: 5
+Neighbours: 112,116
+Shell: 9
+Core:101
+}
+Iron{
+UID: 101
+}
+Asteroid{
+UID: 106
+X: -0.8768021026059183
+Y: 0.8450072380679984
+Sector: 5
+Neighbours: 68,158
+Shell: 4
+Core:107
+}
+Uranium{
+UID: 107
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 112
+X: -0.6669234361887478
+Y: 0.3465299422001865
+Sector: 5
+Neighbours: 46,98,100
+Shell: 5
+Core:113
+}
+Ice{
+UID: 113
+}
+Asteroid{
+UID: 126
+X: -1.1376585221034945
+Y: 0.16165327983149183
+Sector: 5
+Neighbours: 46,52
+Shell: 6
+Core:127
+}
+Uranium{
+UID: 127
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 130
+X: -0.45712831493608913
+Y: 0.20281359479172517
+Sector: 5
+Neighbours: 34,94,98
+Shell: 5
+Core:131
+}
+Ice{
+UID: 131
+}
+Asteroid{
+UID: 134
+X: -0.7819143384297389
+Y: 0.06928893736169933
+Sector: 5
+Neighbours: 46,50
+Shell: 6
+Core:135
+}
+Coal{
+UID: 135
+}
+Asteroid{
+UID: 138
+X: -1.3438857711166199
+Y: 0.6034714224174267
+Sector: 5
+Neighbours: 158
+Shell: 7
+Core:139
+}
+Iron{
+UID: 139
+}
+Asteroid{
+UID: 158
+X: -1.1610281340423516
+Y: 0.6477382318838474
+Sector: 5
+Neighbours: 106,138
+Shell: 6
+Core:159
+}
+Ice{
+UID: 159
+}
+Sector{
+UID: 6
+Fields: 32,48,50,96,122,168
+isClose: false
+}
+Asteroid{
+UID: 32
+X: -0.42649437733407863
+Y: -0.20913347392599663
+Sector: 6
+Neighbours: 96
+Shell: 9
+Core:33
+}
+Iron{
+UID: 33
+}
+Asteroid{
+UID: 48
+X: -1.0438636506405865
+Y: -0.2541005481170593
+Sector: 6
+Neighbours: 50,168
+Shell: 5
+Core:49
+}
+Ice{
+UID: 49
+}
+Asteroid{
+UID: 50
+X: -0.9043319438395921
+Y: -0.1773534439308835
+Sector: 6
+Neighbours: 48,134
+Shell: 7
+Core:51
+}
+Uranium{
+UID: 51
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 96
+X: -0.24592760087284646
+Y: -0.06377872819043988
+Sector: 6
+Neighbours: 32,34,76
+Shell: 4
+Core:97
+}
+Uranium{
+UID: 97
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 122
+X: -0.5622798042775308
+Y: -0.4544119146234072
+Sector: 6
+Neighbours: 24
+Shell: 6
+Core:123
+}
+Iron{
+UID: 123
+}
+Asteroid{
+UID: 168
+X: -1.2438507754423833
+Y: -0.617941915945985
+Sector: 6
+Neighbours: 48
+Shell: 9
+Core:169
+}
+Uranium{
+UID: 169
+ExposedFor: 0
+isExposed: false
+}
+Sector{
+UID: 7
+Fields: 12,18,24,28,64,70,76,136,154,156,162,166
+isClose: false
+}
+Asteroid{
+UID: 12
+X: -0.21202602910428578
+Y: -1.4650362925241371
+Sector: 7
+Neighbours: 70
+Shell: 8
+Core:13
+}
+Ice{
+UID: 13
+}
+Asteroid{
+UID: 18
+X: -0.19861115717139569
+Y: -0.6120969775159206
+Sector: 7
+Neighbours: 24,136
+Shell: 7
+Core:19
+}
+Ice{
+UID: 19
+}
+Asteroid{
+UID: 24
+X: -0.38371725391484773
+Y: -0.6151113107459396
+Sector: 7
+Neighbours: 18,64,122
+Shell: 6
+Core:25
+}
+Uranium{
+UID: 25
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 28
+X: -0.2830611343619075
+Y: -0.962367913100777
+Sector: 7
+Neighbours: 70,166
+Shell: 4
+Core:29
+}
+Ice{
+UID: 29
+}
+Asteroid{
+UID: 64
+X: -0.6630755892921988
+Y: -0.7573948876989663
+Sector: 7
+Neighbours: 24,154
+Shell: 9
+Core:65
+}
+Uranium{
+UID: 65
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 70
+X: -0.11350210814313885
+Y: -1.1883622194386636
+Sector: 7
+Neighbours: 12,28,144
+Shell: 9
+Core:71
+}
+Coal{
+UID: 71
+}
+Asteroid{
+UID: 76
+X: -0.03682155701955634
+Y: -0.1967839303436519
+Sector: 7
+Neighbours: 42,96,136
+Shell: 8
+Core:77
+}
+Iron{
+UID: 77
+}
+Asteroid{
+UID: 136
+X: -0.16865278835250552
+Y: -0.33666755885075894
+Sector: 7
+Neighbours: 18,76
+Shell: 6
+Core:137
+}
+Iron{
+UID: 137
+}
+Asteroid{
+UID: 154
+X: -0.8085937425840295
+Y: -0.850232408008363
+Sector: 7
+Neighbours: 64
+Shell: 4
+Core:155
+}
+Coal{
+UID: 155
+}
+Asteroid{
+UID: 156
+X: -0.6994928300400183
+Y: -1.200497117024399
+Sector: 7
+Neighbours: 162,166
+Shell: 8
+Core:157
+}
+Iron{
+UID: 157
+}
+Asteroid{
+UID: 162
+X: -0.8905316905703411
+Y: -1.1970901776728273
+Sector: 7
+Neighbours: 156
+Shell: 8
+Core:163
+}
+Ice{
+UID: 163
+}
+Asteroid{
+UID: 166
+X: -0.40422041453171215
+Y: -1.1580766490974788
+Sector: 7
+Neighbours: 28,156
+Shell: 5
+Core:167
+}
+Uranium{
+UID: 167
+ExposedFor: 0
+isExposed: false
+}
+Sector{
+UID: 8
+Fields: 22,40,86,108,132,140,144,152,160
+isClose: false
+}
+Asteroid{
+UID: 22
+X: 0.6288299240157046
+Y: -0.9556934500908381
+Sector: 8
+Neighbours: 140,160
+Shell: 8
+Core:23
+}
+Ice{
+UID: 23
+}
+Asteroid{
+UID: 40
+X: 0.2610404935755933
+Y: -0.9653411408307365
+Sector: 8
+Neighbours: 140,152
+Shell: 4
+Core:41
+}
+Iron{
+UID: 41
+}
+Asteroid{
+UID: 86
+X: 0.466634121561521
+Y: -0.5830709449507454
+Sector: 8
+Neighbours: 10
+Shell: 4
+Core:87
+}
+Uranium{
+UID: 87
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 108
+X: 0.13807583950253197
+Y: -0.7052900806496525
+Sector: 8
+Neighbours: 152
+Shell: 8
+Core:109
+}
+Iron{
+UID: 109
+}
+Asteroid{
+UID: 132
+X: 0.3575778030382442
+Y: -1.2892377675182305
+Sector: 8
+Neighbours: 140,144
+Shell: 4
+Core:133
+}
+Ice{
+UID: 133
+}
+Asteroid{
+UID: 140
+X: 0.4124399777407792
+Y: -1.0155212129902162
+Sector: 8
+Neighbours: 22,40,132
+Shell: 9
+Core:141
+}
+Ice{
+UID: 141
+}
+Asteroid{
+UID: 144
+X: 0.10651692879867318
+Y: -1.3013322334104553
+Sector: 8
+Neighbours: 70,132
+Shell: 4
+Core:145
+}
+Iron{
+UID: 145
+}
+Asteroid{
+UID: 152
+X: 0.01934478842049906
+Y: -0.8972470490754246
+Sector: 8
+Neighbours: 40,108
+Shell: 5
+Core:153
+}
+Ice{
+UID: 153
+}
+Asteroid{
+UID: 160
+X: 0.7922996886188247
+Y: -0.9467924146455358
+Sector: 8
+Neighbours: 22,36,62
+Shell: 9
+Core:161
+}
+Ice{
+UID: 161
+}
+Sector{
+UID: 9
+Fields: 10,26,30,36,42,62,66,72,80,84,88,118,128,146
+isClose: false
+}
+Asteroid{
+UID: 10
+X: 0.4944847053628003
+Y: -0.407616497911217
+Sector: 9
+Neighbours: 72,80,84,86,146
+Shell: 4
+Core:11
+}
+Coal{
+UID: 11
+}
+Asteroid{
+UID: 26
+X: 1.189358151968102
+Y: -0.2485346993591014
+Sector: 9
+Neighbours: 30,88
+Shell: 9
+Core:27
+}
+Ice{
+UID: 27
+}
+Asteroid{
+UID: 30
+X: 1.21314262978827
+Y: -0.46671049224024513
+Sector: 9
+Neighbours: 26,128
+Shell: 8
+Core:31
+}
+Ice{
+UID: 31
+}
+Asteroid{
+UID: 36
+X: 0.9572061815928259
+Y: -0.9284298897103741
+Sector: 9
+Neighbours: 62,66,160
+Shell: 4
+Core:37
+}
+Uranium{
+UID: 37
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 42
+X: 0.2662062372139367
+Y: -0.15230750346450111
+Sector: 9
+Neighbours: 76,80,118,146
+Shell: 7
+Core:43
+}
+Ice{
+UID: 43
+}
+Asteroid{
+UID: 62
+X: 0.8539211756104914
+Y: -0.7694620992055298
+Sector: 9
+Neighbours: 36,160
+Shell: 4
+Core:63
+}
+Iron{
+UID: 63
+}
+Asteroid{
+UID: 66
+X: 1.1860154523340782
+Y: -0.8278359242085672
+Sector: 9
+Neighbours: 36,128
+Shell: 6
+Core:67
+}
+Coal{
+UID: 67
+}
+Asteroid{
+UID: 72
+X: 0.6333194056071072
+Y: -0.22423702204434845
+Sector: 9
+Neighbours: 10,84,118,146
+Shell: 4
+Core:73
+}
+Uranium{
+UID: 73
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 80
+X: 0.31259751738216557
+Y: -0.29840564753660975
+Sector: 9
+Neighbours: 10,42,146
+Shell: 8
+Core:81
+}
+Ice{
+UID: 81
+}
+Asteroid{
+UID: 84
+X: 0.6714626484136846
+Y: -0.43220473346245186
+Sector: 9
+Neighbours: 10,72,88
+Shell: 8
+Core:85
+}
+Uranium{
+UID: 85
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 88
+X: 0.8626873234472114
+Y: -0.35806263229063495
+Sector: 9
+Neighbours: 26,84
+Shell: 7
+Core:89
+}
+Ice{
+UID: 89
+}
+Asteroid{
+UID: 118
+X: 0.49249390042171975
+Y: -0.07217148854621921
+Sector: 9
+Neighbours: 42,58,72,146
+Shell: 6
+Core:119
+}
+Uranium{
+UID: 119
+ExposedFor: 0
+isExposed: false
+}
+Asteroid{
+UID: 128
+X: 1.1480641308566215
+Y: -0.619922941834102
+Sector: 9
+Neighbours: 30,66
+Shell: 9
+Core:129
+}
+Ice{
+UID: 129
+}
+Asteroid{
+UID: 146
+X: 0.4441588864594255
+Y: -0.2197401343256305
+Sector: 9
+Neighbours: 10,42,72,80,118
+Shell: 7
+Core:147
+}
+Coal{
+UID: 147
+}
+Controller{
+controller: true
+Order: 1
+Current: 1
+}
+Sun{
+Target: 7
+Rounds: 4
+}

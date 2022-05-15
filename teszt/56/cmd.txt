@@ -1,0 +1,52 @@
+load test_56.txt
+controller off
+r 13 drill
+p 14 mine
+r 15 drill
+p 16 mine
+r 13 move 2
+p 14 move 2
+r 15 move 11
+p 16 move 11
+r 13 drill
+p 14 mine
+r 15 drill
+p 16 mine
+r 13 move 3
+p 14 move 3
+r 15 move 10
+p 16 move 10
+r 13 drill
+p 14 mine
+r 15 drill
+p 16 mine
+r 13 move 4
+p 14 move 4
+r 15 move 9
+p 16 move 9
+r 13 drill
+p 14 mine
+r 15 drill
+p 16 mine
+r 13 move 5
+p 14 move 5
+r 15 move 8
+p 16 move 8
+r 13 drill
+p 14 mine
+r 15 drill
+p 16 mine
+r 13 move 6
+p 14 move 6
+r 15 move 7
+p 16 move 7
+r 13 drill
+p 14 mine
+r 15 drill
+p 16 mine
+p 14 move 7
+p 16 craft base
+p 14 build_base
+p 16 build_base
+save testdone56.txt
+compare testdone56.txt testelvart56.txt

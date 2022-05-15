@@ -1,0 +1,28 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Shell: 5
+	Ships: 2
+	Sector: 5
+}
+PlayerShip{
+	UID: 2
+	Asteroid: 1
+	Teleports: 3, 4
+}
+TeleportGate{
+	UID: 3
+	Pair: 4
+	WasHitBySunStorm: false
+}
+TeleportGate{
+	UID: 4
+	Pair: 3
+	WasHitBySunStorm: false
+}
+Sector{
+	UID: 5
+	Fields: 1
+	isClose: false
+}

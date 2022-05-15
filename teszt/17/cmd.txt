@@ -1,0 +1,5 @@
+load test_17.txt 
+controller off
+@Fail p 2 put_back 4
+save testdone17.txt
+compare testdone17.txt testelvart17.txt

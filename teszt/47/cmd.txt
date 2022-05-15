@@ -1,0 +1,5 @@
+load test_47.txt
+controller off
+p 3 move 2
+save testdone47.txt
+compare testdone47.txt testelvart47.txt

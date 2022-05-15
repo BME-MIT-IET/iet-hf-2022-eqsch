@@ -1,0 +1,36 @@
+Asteroid{
+	UID: 1
+	Neighbours: 3
+	Shell: 10
+	Ships: 5
+	Sector: 6
+}
+Asteroid{
+	UID: 2
+	Neighbours: 4
+	Shell: 10
+	Sector: 6
+}
+TeleportGate{
+	UID: 3
+	Pair: 4
+	Neighbours: 1
+	Sector: 6
+	WasHitBySunStorm: false
+}
+TeleportGate{
+	UID: 4
+	Pair: 3
+	Neighbours: 2
+	Sector: 6
+	WasHitBySunStorm: false
+}
+RobotShip{
+	UID: 5
+	Asteroid: 1
+}
+Sector{
+	UID: 6
+	Fields: 1, 2, 3, 4
+	isClose: false
+}

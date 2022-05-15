@@ -1,0 +1,2 @@
+javac src/Program.java
+jar cfe Skeleton.jar src/Program *.class Model/*.class Model/Materials/*.class

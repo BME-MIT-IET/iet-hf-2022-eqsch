@@ -1,0 +1,13 @@
+Asteroid{
+	UID: 2
+	X: @Ignore
+
+    Y: @Ignore
+	Shell: 3
+	Sector: 5
+}
+Sector{
+	UID: 5
+	Fields: 2
+	isClose: true
+}

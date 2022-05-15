@@ -1,0 +1,49 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Shell: 5
+	Ships: 2
+	Sector: 9
+}
+PlayerShip{
+	UID: 2
+	Asteroid: 1
+	Teleports: 7, 8
+	Materials: 3, 4, 5, 6
+}
+Iron{
+	UID: 3
+}
+Iron{
+	UID: 4
+}
+Ice{
+	UID: 5
+}
+Uranium{
+	UID: 6
+	ExposedFor: 0
+	isExposed: false
+}
+TeleportGate{
+	UID: 7
+	X: @Ignore
+
+    Y: @Ignore
+	Pair: 8
+	WasHitBySunStorm: false
+}
+TeleportGate{
+	UID: 8
+	X: @Ignore
+
+    Y: @Ignore
+	Pair: 7
+	WasHitBySunStorm: false
+}
+Sector{
+	UID: 9
+	Fields: 1
+	isClose: false
+}

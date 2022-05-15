@@ -1,0 +1,41 @@
+Asteroid{
+	UID: 1
+X: @Ignore
+Y: @Ignore
+	Shell: 5
+	Ships: 2
+	Base: 10
+	Sector: 9
+}
+PlayerShip{
+	UID: 2
+	Asteroid: 1
+	Materials: 6, 7, 8
+}
+Iron{
+	UID: 3
+}
+Iron{
+	UID: 4
+}
+Iron{
+	UID: 5
+}
+Iron{
+	UID: 6
+}
+Iron{
+	UID: 7
+}
+Iron{
+	UID: 8
+}
+Sector{
+	UID: 9
+	Fields: 1
+	isClose: false
+}
+Base{
+	UID: 10
+	Materials: 3, 4, 5
+}

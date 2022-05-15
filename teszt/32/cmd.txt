@@ -1,0 +1,6 @@
+load test_32.txt
+controller off
+r 2 drill
+endturn
+save testdone32.txt
+compare testdone32.txt testelvart32.txt

@@ -1,0 +1,32 @@
+.currentasteroidpanel {
+    -fx-background-image:url('Resources/current_asteroid_panel.png');
+    -fx-background-size: 100% 100%
+}
+
+.shellpanel {
+    -fx-background-image:url('Resources/shell_panel.png');
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-highlight-text-fill: rgba(0, 0, 0, 1);
+}
+
+.corepanel {
+    -fx-background-image:url('Resources/core_panel.png');
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-highlight-text-fill: rgba(0, 0, 0, 1);
+}
+
+.sectorpanel {
+    -fx-background-image:url('Resources/sector.png');
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-highlight-text-fill: rgba(0, 0, 0, 1);
+}
+
+.closepanel {
+    -fx-background-image:url('Resources/close.png');
+    -fx-background-size: 100% 100%;
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-highlight-text-fill: rgba(0, 0, 0, 1);
+}

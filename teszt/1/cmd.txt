@@ -1,0 +1,5 @@
+load test_1.txt 
+controller off
+p 2 mine
+save testdone1.txt
+compare testdone1.txt testelvart1.txt

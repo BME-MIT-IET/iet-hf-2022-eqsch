@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="CurrentAsteroidPanel" alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="209.0" spacing="15.0" styleClass="currentteleportpanel" stylesheets="@currentteleportsidepanel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="NameLabel" alignment="CENTER" prefHeight="33.0" prefWidth="167.0">
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Comic Sans MS" size="24.0" />
+            </font>
+        </Label>
+        <AnchorPane fx:id="ActiveField" prefHeight="60.0" prefWidth="175.0" styleClass="activepanel" stylesheets="@currentteleportsidepanel.css">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </AnchorPane>
+        <AnchorPane fx:id="CrazyField" prefHeight="60.0" prefWidth="175.0" styleClass="crazypanel" stylesheets="@currentteleportsidepanel.css">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </AnchorPane>
+        <TextField fx:id="SectorField" alignment="CENTER_RIGHT" editable="false" prefHeight="60.0" prefWidth="175.0" promptText=" " styleClass="sectorpanel" stylesheets="@currentteleportsidepanel.css">
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+            <padding>
+                <Insets right="30.0" />
+            </padding>
+        </TextField>
+        <AnchorPane fx:id="CloseField" prefHeight="60.0" prefWidth="175.0" styleClass="closepanel" stylesheets="@currentteleportsidepanel.css">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </AnchorPane>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</VBox>

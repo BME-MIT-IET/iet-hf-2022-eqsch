@@ -1,0 +1,13 @@
+load test_55.txt
+controller off
+r 5 drill
+p 4 drill
+endturn
+r 5 move 2
+p 4 move 3
+endturn
+r 5 move 3
+p 4 move 1
+endturn
+save testdone55.txt 
+compare testdone55.txt testelvart55.txt
