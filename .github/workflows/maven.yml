@@ -12,9 +12,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      - name: Build with Gradle
-        run: ./gradlew build
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
       - name: Run the Gradle test task
         run: ./gradlew test
