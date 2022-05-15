@@ -1,5 +1,5 @@
 Asteroid{
-	UID: 1
+	UID: 122
 X: @Ignore
 Y: @Ignore
 	Shell: 5
