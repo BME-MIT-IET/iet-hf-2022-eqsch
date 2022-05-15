@@ -82,6 +82,8 @@ public class TestRunner {
                 }
                 catch (IOException e) {
                     System.out.println("Invalid Test Directory in Test Root. Invalid Dir: " + f.getName());
+                    System.out.println("MSG:" + e.getMessage());
+                    e.printStackTrace();
                     ret = false;
                 }
                 catch (Exception e) {
