@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="485.0" prefWidth="339.0" spacing="15.0" styleClass="craftpanel" stylesheets="@craftsidepanel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="RobotButton" mnemonicParsing="false" onAction="#Robot" prefHeight="60.0" prefWidth="218.0" styleClass="robotbutton" stylesheets="@craftsidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="TeleportsButton" mnemonicParsing="false" onAction="#Teleports" prefHeight="60.0" prefWidth="218.0" styleClass="teleportsbutton" stylesheets="@craftsidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Button>
+      <Button fx:id="BaseButton" mnemonicParsing="false" onAction="#Base" prefHeight="60.0" prefWidth="218.0" styleClass="basebutton" stylesheets="@craftsidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Button>
+      <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#Cancel" prefHeight="60.0" prefWidth="218.0" styleClass="cancelbutton" stylesheets="@craftsidepanel.css" textFill="TRANSPARENT" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets top="80.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="339.0" spacing="15.0" styleClass="putbackpanel" stylesheets="@putbacksidepanel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="CoalButton" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="61.0" prefWidth="252.0" styleClass="coalbutton" stylesheets="@putbacksidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="IronButton" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Iron" prefHeight="61.0" prefWidth="252.0" styleClass="ironbutton" stylesheets="@putbacksidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="IceButton" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Ice" prefHeight="61.0" prefWidth="252.0" styleClass="icebutton" stylesheets="@putbacksidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="UranButton" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Uran" prefHeight="61.0" prefWidth="252.0" styleClass="uranbutton" stylesheets="@putbacksidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Button>
+      <Button fx:id="CancelButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Cancel" prefHeight="61.0" prefWidth="218.0" styleClass="cancelbutton" stylesheets="@putbacksidepanel.css" textFill="TRANSPARENT">
+         <VBox.margin>
+            <Insets top="70.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

@@ -1,0 +1,29 @@
+.putbackpanel {
+    -fx-background-image:url('Resources/put_back_panel.png');
+    -fx-background-size: 100% 100%
+}
+
+.coalbutton {
+    -fx-background-image:url('Resources/coal_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.ironbutton {
+    -fx-background-image:url('Resources/iron_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.icebutton {
+    -fx-background-image:url('Resources/ice_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.uranbutton {
+    -fx-background-image:url('Resources/uran_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.cancelbutton {
+    -fx-background-image:url('Resources/cancel_button.png');
+    -fx-background-size: 100% 100%
+}

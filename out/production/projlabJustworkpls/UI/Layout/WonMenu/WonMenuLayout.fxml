@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="Anchor" prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@wonmenu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="60.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="132.0" prefWidth="495.0" styleClass="won" stylesheets="@wonmenu.css" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+               <children>
+                  <Button fx:id="Exit_button" mnemonicParsing="false" onAction="#Exit" prefHeight="76.0" prefWidth="164.0" styleClass="exit" stylesheets="@wonmenu.css" />
+                  <Button fx:id="Restart_button" mnemonicParsing="false" onAction="#Restart" prefHeight="76.0" prefWidth="164.0" styleClass="restart" stylesheets="@wonmenu.css" />
+               </children>
+            </HBox>
+            <Pane prefHeight="359.0" prefWidth="1920.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+.anchor{
+    -fx-background-image:url('Resources/BG.png');
+    -fx-background-size: 0% 0%;
+}
+
+.optionspanel {
+    -fx-background-image:url('Resources/options_panel.png');
+    -fx-background-size: 100% 100%
+}
+
+.savebutton {
+    -fx-background-image:url('Resources/save_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.menubutton {
+    -fx-background-image:url('Resources/menu_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.exitbutton {
+    -fx-background-image:url('Resources/exit_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.cancelbutton {
+    -fx-background-image:url('Resources/cancel_button.png');
+    -fx-background-size: 100% 100%
+}

@@ -1,0 +1,29 @@
+.inventorypanel {
+    -fx-background-image:url('Resources/grid.png');
+    -fx-background-size: 100% 100%
+}
+
+.coal {
+    -fx-background-image:url('Resources/coal_inventory.png');
+    -fx-background-size: 100% 100%
+}
+
+.ice {
+    -fx-background-image:url('Resources/ice_inventory.png');
+    -fx-background-size: 100% 100%
+}
+
+.iron {
+    -fx-background-image:url('Resources/iron_inventory.png');
+    -fx-background-size: 100% 100%
+}
+
+.uran {
+    -fx-background-image:url('Resources/uran_inventory.png');
+    -fx-background-size: 100% 100%
+}
+
+.teleports {
+    -fx-background-image:url('Resources/portal_inventory.png');
+    -fx-background-size: 100% 100%
+}

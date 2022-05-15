@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="209.0" styleClass="infopanel" stylesheets="@baseinfosidepanel.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Base">
+       <VBox.margin>
+           <Insets top="5.0" />
+       </VBox.margin>
+       <font>
+           <Font name="Comic Sans MS" size="24.0" />
+       </font>
+      </Label>
+      <Label fx:id="Coal" alignment="TOP_LEFT" text="1">
+       <font>
+           <Font name="Comic Sans MS" size="24.0" />
+       </font>
+         <VBox.margin>
+            <Insets left="65.0" top="55.0" />
+         </VBox.margin>
+      </Label>
+       <Label fx:id="Iron" text="1">
+           <font>
+               <Font name="Comic Sans MS" size="24.0" />
+           </font>
+         <VBox.margin>
+            <Insets left="65.0" top="36.0" />
+         </VBox.margin>
+       </Label>
+       <Label fx:id="Ice" text="1">
+           <font>
+               <Font name="Comic Sans MS" size="24.0" />
+           </font>
+         <VBox.margin>
+            <Insets left="65.0" top="38.0" />
+         </VBox.margin>
+       </Label>
+       <Label fx:id="Uranium" text="1">
+           <font>
+               <Font name="Comic Sans MS" size="24.0" />
+           </font>
+         <VBox.margin>
+            <Insets left="65.0" top="40.0" />
+         </VBox.margin>
+       </Label>
+   </children>
+</VBox>

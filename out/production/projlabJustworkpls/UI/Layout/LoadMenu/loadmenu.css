@@ -1,0 +1,29 @@
+.anchor {
+    -fx-background-image:url('Resources/BG.png');
+    -fx-background-size: 100% 100%;
+}
+
+.back{
+    -fx-background-image:url('Resources/back.png');
+    -fx-background-size: 100% 100%;
+}
+
+.load{
+    -fx-background-image:url('Resources/load.png');
+    -fx-background-size: 100% 100%;
+}
+
+.left{
+    -fx-background-image:url('Resources/left.png');
+    -fx-background-size: 100% 100%;
+}
+
+.right{
+    -fx-background-image:url('Resources/right.png');
+    -fx-background-size: 100% 100%;
+}
+
+.save{
+    -fx-background-image:url('Resources/save.png');
+    -fx-background-size: 100% 100%;
+}

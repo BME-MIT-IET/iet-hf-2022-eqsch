@@ -1,0 +1,19 @@
+.anchor {
+    -fx-background-image:url('Resources/bg_main.png');
+    -fx-background-size: 100% 100%
+}
+
+.load{
+    -fx-background-image:url('Resources/load_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.start{
+    -fx-background-image:url('Resources/start_button.png');
+    -fx-background-size: 100% 100%;
+}
+
+.exit{
+    -fx-background-image:url('Resources/exit_button.png');
+    -fx-background-size: 100% 100%;
+}

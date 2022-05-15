@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@startmenu.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1920.0" spacing="40.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="335.0" styleClass="players" stylesheets="@startmenu.css">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin></Pane>
+                        <TextField fx:id="Counter_field" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#Counter" prefHeight="77.0" prefWidth="86.0" styleClass="counter" stylesheets="@startmenu.css" text="1">
+                           <font>
+                              <Font name="Comic Sans MS" size="36.0" />
+                           </font></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0">
+                     <children>
+                        <Pane prefHeight="76.0" prefWidth="335.0" styleClass="mapType" stylesheets="@startmenu.css">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin></Pane>
+                        <Button fx:id="Small_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Small" prefHeight="77.0" prefWidth="164.0" styleClass="small" stylesheets="@startmenu.css" textFill="TRANSPARENT" />
+                        <Button fx:id="Normal_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Normal" prefHeight="77.0" prefWidth="164.0" styleClass="normal" stylesheets="@startmenu.css" textFill="TRANSPARENT" />
+                        <Button fx:id="Large_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Large" prefHeight="77.0" prefWidth="164.0" styleClass="large" stylesheets="@startmenu.css" textFill="TRANSPARENT" />
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="335.0" styleClass="fileName" stylesheets="@startmenu.css">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin></Pane>
+                        <TextField fx:id="File_name_field" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="335.0" styleClass="fileName_in" stylesheets="@startmenu.css" text="save">
+                           <font>
+                              <Font name="Comic Sans MS" size="36.0" />
+                           </font></TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <Pane prefHeight="135.0" prefWidth="1920.0" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="1000.0">
+               <children>
+                  <Button fx:id="Back_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Back" prefHeight="77.0" prefWidth="164.0" styleClass="back" stylesheets="@startmenu.css" textFill="TRANSPARENT" />
+                  <Button fx:id="Start_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#Start" prefHeight="77.0" prefWidth="164.0" styleClass="start" stylesheets="@startmenu.css" textFill="TRANSPARENT" />
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+.craftpanel {
+    -fx-background-image:url('Resources/craft_panel.png');
+    -fx-background-size: 100% 100%
+}
+
+.robotbutton {
+    -fx-background-image:url('Resources/robot_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.teleportsbutton {
+    -fx-background-image:url('Resources/teleports_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.basebutton {
+    -fx-background-image:url('Resources/base_button.png');
+    -fx-background-size: 100% 100%
+}
+
+.cancelbutton {
+    -fx-background-image:url('Resources/cancel_button.png');
+    -fx-background-size: 100% 100%
+}
