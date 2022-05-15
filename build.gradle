@@ -1,0 +1,51 @@
+plugins {
+    id 'application'
+}
+group 'com.example'
+version '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+def javaFXPlatform = getJavaFXPlatform()
+def javaFXVersion = "15.0.1"
+
+dependencies {
+    // you need a dependency for each of the JavaFX modules you're going to use
+    implementation "org.openjfx:javafx-base:${javaFXVersion}:${javaFXPlatform}"
+    implementation "org.openjfx:javafx-controls:${javaFXVersion}:${javaFXPlatform}"
+    implementation "org.openjfx:javafx-graphics:${javaFXVersion}:${javaFXPlatform}"
+    implementation "org.openjfx:javafx-fxml:${javaFXVersion}:${javaFXPlatform}"
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java"]
+            includes = ["**/*.fxml","**/*.css","**/*.png","**/*.PNG"]
+        }
+    }
+}
+
+application {
+
+    //Your JavaFX application class
+    mainClass.set('Launcher')
+}
+
+java {
+    // this enables Java Modularity in Gradle (version 6.7 and above)
+    modularity.inferModulePath.set(true)
+}
+
+// Based on this StackOverflow answer: https://stackoverflow.com/a/65209664/653519
+private static String getJavaFXPlatform() {
+    def currentOS = org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.currentOperatingSystem;
+    if (currentOS.isWindows()) {
+        return 'win'
+    } else if (currentOS.isLinux()) {
+        return 'linux'
+    } else if (currentOS.isMacOsX()) {
+        return 'mac'
+    }
+    return null
+}
