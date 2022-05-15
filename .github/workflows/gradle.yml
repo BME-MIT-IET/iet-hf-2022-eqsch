@@ -17,7 +17,7 @@ permissions:
   contents: read
 
 jobs:
-  build_and_test:
+  build:
 
     runs-on: ubuntu-latest
 
@@ -30,11 +30,5 @@ jobs:
         distribution: 'temurin'
     - name: Grant Permissions to gradlew
       run: chmod +x gradlew
-    - name: Setup and execute Gradle 'build' task
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: build
-    - name: Setup and execute Gradle 'test' task
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: test
+    - name: Build
+      run: ./gradlew build --info
