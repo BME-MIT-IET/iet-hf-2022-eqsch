@@ -130,7 +130,7 @@ public class LoadMenuController {
     public void Load() {
         GameController gc = new GameController();
         GameUIController gameUIController = new GameUIController(gc, stage);
-        gc.SetCurrentWorkingDirectory("\\saves");
+        gc.SetCurrentWorkingDirectory("/saves");
         try {
             gameUIController.getGameController().InterpretCommand("load " + saves.get(currentIndex));
             FXMLLoader fxmlLoader = new FXMLLoader();

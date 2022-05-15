@@ -124,7 +124,7 @@ public class StartMenuController {
     public void Start(){
 
         GameController gc = new GameController();
-        gc.SetCurrentWorkingDirectory("\\saves");
+        gc.SetCurrentWorkingDirectory("/saves");
         gc.NewMap();
         GameUIController gameUIController = new GameUIController(gc, stage);
         if(File_name_field.getText() == null) gameUIController.setFileName("save");
