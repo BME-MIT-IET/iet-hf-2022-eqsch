@@ -181,13 +181,6 @@ public class MapBuilder {
             s.Add(a);
         }
 
-//        // creating players on random asteroid
-//        for (int i = 0; i < 1; i++) {
-//            PlayerShip p = new PlayerShip(asteroids.get(random.nextInt(asteroids.size())));
-//            GC.ps.add(p);
-//        }
-
-
         // creating UFOs on random asteroid
         for (int i = 0; i < MagicConstants.shipNumber; i++) {
             UFO p = new UFO(asteroids.get(random.nextInt(asteroids.size())));
@@ -254,19 +247,6 @@ public class MapBuilder {
         }while(tooClose(asteroids,a) || tooCloseToSun(a));
 
         return a;
-    }
-
-    /**
-     * Generating random Material which is not the given param
-     * @return the sector which should be ignored
-     */
-    private Sector genRndSector(Sector s){
-        while(true){
-            Sector rndSector = map.getSectors().get(random.nextInt(map.getSectors().size()));
-            if(s == rndSector)
-                continue;
-            return rndSector;
-        }
     }
 
     /**
