@@ -12,8 +12,7 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - uses: gradle/gradle-build-action@v2
-        with:
-          arguments: build
+      - name: Build with Gradle
+        run: ./gradlew build
       - name: Run the Gradle test task
         run: ./gradlew test
