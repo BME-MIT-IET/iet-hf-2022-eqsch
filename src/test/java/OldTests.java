@@ -10,7 +10,6 @@ public class OldTests {
     public void runAllOldTests() throws IOException {
         TestRunner tc = new TestRunner("teszt");
         GameController gc = new GameController();
-        tc.RunAllTests(gc);
-        Assert.assertTrue(false);
+        Assert.assertTrue(tc.RunAllTests(gc));
     }
 }
