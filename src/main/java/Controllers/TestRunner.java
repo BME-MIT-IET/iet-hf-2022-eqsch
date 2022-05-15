@@ -37,7 +37,7 @@ public class TestRunner {
      * @throws Exception
      */
     void Run(File Test,GameController gc) throws Exception {
-        File cmd = new File(Test.getCanonicalPath() + "\\cmd.txt");
+        File cmd = new File(Test.getCanonicalPath() + "/cmd.txt");
         Scanner FScanner = new Scanner(cmd);
         while (FScanner.hasNextLine()) {
             String data = FScanner.nextLine();
