@@ -1,11 +1,7 @@
 package step_definitions;
 
 import Model.Asteroid;
-import Model.Map;
-import Model.Materials.BillOfMaterial;
-import Model.Materials.Coal;
-import Model.Materials.Material;
-import Model.Materials.Uranium;
+import Model.Materials.*;
 import Model.PlayerShip;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,16 +9,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.ArrayList;
+import java.util.Random;
 
-import static step_definitions.AsteroidStepDefinitions.asteroid;
-import static step_definitions.AsteroidStepDefinitions.map;
-import static step_definitions.AsteroidStepDefinitions.loweredShellNumbers;
+import static step_definitions.AsteroidStepDefinitions.*;
 
 public class PlayerStepDefinitions {
-
     static PlayerShip playerShip = null;
-    boolean lastMineSuccessfull;
-
+    boolean lastMineSuccessful;
+    int numberOfTeleportsBeforeCrafting;
 
     @Given("I have a player")
     public void iHaveAPlayer(){
@@ -38,11 +32,7 @@ public class PlayerStepDefinitions {
     public void playerMines() {
         int inventorySize = playerShip.getMaterials().size();
         playerShip.Mine();
-        if (inventorySize < playerShip.getMaterials().size()) {
-            lastMineSuccessfull = true;
-        } else {
-            lastMineSuccessfull = false;
-        }
+        lastMineSuccessful = inventorySize < playerShip.getMaterials().size();
     }
 
     @Then("Player should have mined a mineral")
@@ -79,7 +69,7 @@ public class PlayerStepDefinitions {
 
     @Then("Player should have mined nothing")
     public void playerShouldHaveMinedNothing() {
-        if (lastMineSuccessfull) {
+        if (lastMineSuccessful) {
             System.out.println("Player mine successfully");
         } else {
             System.out.println("Player could not mine successfully");
@@ -95,34 +85,75 @@ public class PlayerStepDefinitions {
 
     @And("Player has {int} Iron in backpack")
     public void playerHasIronInBackpack(int arg0) {
+        Asteroid originalAsteroid = playerShip.getAsteroid();
+        for (int i = 0; i < arg0; ++i) {
+            Asteroid tempAsteroid = new Asteroid(sector, new Iron(map), 0);
+            playerShip.setAsteroid(tempAsteroid);
+            playerShip.Drill();
+        }
+        playerShip.setAsteroid(originalAsteroid);
     }
 
     @And("Player has {int} Coal in backpack")
     public void playerHasCoalInBackpack(int arg0) {
+        Asteroid originalAsteroid = playerShip.getAsteroid();
+        for (int i = 0; i < arg0; ++i) {
+            Asteroid tempAsteroid = new Asteroid(sector, new Coal(map), 0);
+            playerShip.setAsteroid(tempAsteroid);
+            playerShip.Drill();
+        }
+        playerShip.setAsteroid(originalAsteroid);
     }
 
     @And("Player has {int} Ice in backpack")
     public void playerHasIceInBackpack(int arg0) {
+        Asteroid originalAsteroid = playerShip.getAsteroid();
+        for (int i = 0; i < arg0; ++i) {
+            Asteroid tempAsteroid = new Asteroid(sector, new Ice(map), 0);
+            playerShip.setAsteroid(tempAsteroid);
+            playerShip.Drill();
+        }
+        playerShip.setAsteroid(originalAsteroid);
     }
 
     @And("Player has {int} Uranium in backpack")
     public void playerHasUraniumInBackpack(int arg0) {
+        Asteroid originalAsteroid = playerShip.getAsteroid();
+        for (int i = 0; i < arg0; ++i) {
+            Asteroid tempAsteroid = new Asteroid(sector, new Uranium(map), 0);
+            playerShip.setAsteroid(tempAsteroid);
+            playerShip.Drill();
+        }
+        playerShip.setAsteroid(originalAsteroid);
     }
 
     @When("Player creates a teleport")
     public void playerCreatesATeleport() {
+        numberOfTeleportsBeforeCrafting = playerShip.getTeleports().size();
+        playerShip.CraftTeleportGates();
     }
 
     @Then("Player should have created {int} teleport")
     public void playerShouldHaveCreatedTeleport(int arg0) {
+        if (numberOfTeleportsBeforeCrafting+arg0 == playerShip.getTeleports().size()) {
+            System.out.println("Player has created " + arg0 + " teleports");
+        } else {
+            System.out.println("Player has not created " + arg0 + " teleports");
+        }
     }
 
     @Then("Player should not have created {int} teleport")
     public void playerShouldNotHaveCreatedTeleport(int arg0) {
+        if (playerShip.getTeleports().size() - numberOfTeleportsBeforeCrafting != arg0) {
+            System.out.println("Player has not created " + arg0 + " teleports");
+        } else {
+            System.out.println("Player has created " + arg0 + " teleports, but it shouldn't have been able to");
+        }
     }
 
     @When("Player creates a robot")
     public void playerCreatesARobot() {
+        playerShip.CraftRobot();
     }
 
     @Then("I should have a robot")

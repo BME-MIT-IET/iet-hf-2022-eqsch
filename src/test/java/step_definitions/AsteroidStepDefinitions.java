@@ -3,15 +3,22 @@ package step_definitions;
 import Model.Asteroid;
 import Model.Map;
 import Model.Materials.Coal;
+import Model.Materials.Ice;
 import Model.Materials.Material;
 import Model.Materials.Uranium;
+import Model.Sector;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+
+import java.util.Random;
+
+import static step_definitions.PlayerStepDefinitions.playerShip;
 
 public class AsteroidStepDefinitions {
 
     static Asteroid asteroid;
-    static Map map;
+    static Map map = new Map();
+    static Sector sector = new Sector(map.GetNewUID(), map);
     static boolean loweredShellNumbers;
 
     public void MaterialTurnOver(Uranium uranium) {
@@ -37,10 +44,22 @@ public class AsteroidStepDefinitions {
 
     @And("Asteroid has an ice Core")
     public void asteroidHasAnIceCore() {
+        int originalShells = asteroid.GetShell();
+        boolean playerStandsOnAsteroid = playerShip.getAsteroid() != null;
+
+        asteroid = new Asteroid(sector, new Ice(map), originalShells);
+        if (playerStandsOnAsteroid) {
+            playerShip.setAsteroid(asteroid);
+        }
     }
 
     @And("Ice should have evaporated")
     public void iceShouldHaveEvaporated() {
+        if (asteroid.GetCore() == null) {
+            System.out.println("Asteroid has not got a core");
+        } else {
+            System.out.println("Asteroid has a core");
+        }
     }
 
     @Then("Uranium has been exposed one more time")
@@ -52,9 +71,12 @@ public class AsteroidStepDefinitions {
     @And("Asteroid has an Uranium Core")
     public void asteroidHasAnUraniumCore() {
         int originalShells = asteroid.GetShell();
-        asteroid.SetShell(0);
-        asteroid.SetCore(new Uranium(map));
-        asteroid.SetShell(originalShells);
+        boolean playerStandsOnAsteroid = playerShip.getAsteroid() != null;
+
+        asteroid = new Asteroid(sector, new Uranium(map), originalShells);
+        if (playerStandsOnAsteroid) {
+            playerShip.setAsteroid(asteroid);
+        }
     }
 
     @And("Asteroid has {int} shell")
@@ -69,10 +91,9 @@ public class AsteroidStepDefinitions {
 
     @And("Asteroid has a core")
     public void asteroidHasACore() {
-        int originalShells = asteroid.GetShell();
-        asteroid.SetShell(0);
-        asteroid.SetCore(new Coal(map));
-        asteroid.SetShell(originalShells);
+        /*
+        Asteroid has a shell by default
+         */
     }
 
     @Then("Asteroid should have less shells")
@@ -101,11 +122,7 @@ public class AsteroidStepDefinitions {
 
     @And("I have an asteroid")
     public void iHaveAnAsteroid() {
-        asteroid = new Asteroid(map.GetNewUID());
-        int originalShells = asteroid.GetShell();
-        asteroid.SetShell(0);
-        asteroid.SetCore(new Coal(map));
-        asteroid.SetShell(originalShells);
+        asteroid = new Asteroid(sector, new Coal(map), new Random().nextInt(6)+4);
     }
 
     @Then("Asteroid should not have neighboring teleport")

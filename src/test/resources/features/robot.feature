@@ -28,7 +28,7 @@ Then Asteroid should have less shells
 And Uranium has been exposed one more time
 
 Scenario: 34. RS drills - shell = 1, close, ice evaporates
-Given I have a robot
+Given I have a Robot
 And I have an asteroid
 And Asteroid has 1 shell
 And Asteroid is close to sun
@@ -39,7 +39,7 @@ Then Asteroid should have less shells
 And Ice should have evaporated
 
   Scenario: 24. RS moves to asteroid - has neighbour
-    Given I have a robot
+    Given I have a Robot
     And I have an asteroid
     And Robot stands on asteroid
     And Asteroid has a neighboring asteroid
@@ -47,7 +47,7 @@ And Ice should have evaporated
     Then Robot should stand on the neighboring asteroid
 
   Scenario: 27. RS moves to asteroid - doesnt have neighbour
-    Given I have a robot
+    Given I have a Robot
     And I have an asteroid
     And Robot stands on asteroid
     And Asteroid doesnt have neighboring asteroid
@@ -55,7 +55,7 @@ And Ice should have evaporated
     Then Robot should not stand on the neighboring asteroid
 
   Scenario: 30. RS moves to teleport - pair is active
-    Given I have a robot
+    Given I have a Robot
     And I have an asteroid
     And Robot stands on asteroid
     And Asteroid has a neighboring teleport
@@ -64,7 +64,7 @@ And Ice should have evaporated
     Then Robot should stand on the neighboring teleports pair
 
   Scenario: 33. RS moves to teleport - pair is not active
-    Given I have a robot
+    Given I have a Robot
     And I have an asteroid
     And Robot stands on asteroid
     And Asteroid has a neighboring teleport
