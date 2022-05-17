@@ -2,22 +2,22 @@ package step_definitions;
 
 import Model.Asteroid;
 import Model.Map;
-import Model.Materials.BillOfMaterial;
-import Model.Materials.Coal;
-import Model.Materials.Material;
-import Model.Materials.Uranium;
+import Model.Materials.*;
 import Model.PlayerShip;
+import Model.Sector;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class PlayerStepDefinitions {
     Map map = new Map();
     PlayerShip playerShip = null;
     Asteroid asteroid = null;
+    Sector sector = new Sector(map.GetNewUID(), map);
     boolean lastMineSuccessfull;
     boolean loweredShellNumbers;
 
@@ -28,19 +28,22 @@ public class PlayerStepDefinitions {
 
     @And("I have an asteroid")
     public void iHaveAnAsteroid() {
+        /*
         asteroid = new Asteroid(map.GetNewUID());
         int originalShells = asteroid.GetShell();
         asteroid.SetShell(0);
         asteroid.SetCore(new Coal(map));
         asteroid.SetShell(originalShells);
+         */
+
+        asteroid = new Asteroid(sector, new Coal(map), new Random().nextInt(6)+4);
     }
 
     @And("Asteroid has a core")
     public void asteroidHasACore() {
-        int originalShells = asteroid.GetShell();
-        asteroid.SetShell(0);
-        asteroid.SetCore(new Coal(map));
-        asteroid.SetShell(originalShells);
+        /*
+        Asteroid has a shell by default
+         */
     }
 
     @And("Player stands on asteroid")
@@ -172,13 +175,29 @@ public class PlayerStepDefinitions {
     public void uraniumHasBeenExposedOneMoreTime() {
         MaterialTurnOver(asteroid.GetCore());
         System.out.println(asteroid.GetCore());
+        /* Fixit */
     }
 
     @And("Asteroid has an ice Core")
     public void asteroidHasAnIceCore() {
+        int originalShells = asteroid.GetShell();
+        boolean playerStandsOnAsteroid = false;
+        if (playerShip.getAsteroid() != null) {
+            playerStandsOnAsteroid = true;
+        }
+
+        asteroid = new Asteroid(sector, new Ice(map), originalShells);
+        if (playerStandsOnAsteroid) {
+            playerShip.setAsteroid(asteroid);
+        }
     }
 
     @And("Ice should have evaporated")
     public void iceShouldHaveEvaporated() {
+        if (asteroid.GetCore() == null) {
+            System.out.println("Asteroid has not got a core");
+        } else {
+            System.out.println("Asteroid has a core");
+        }
     }
 }
