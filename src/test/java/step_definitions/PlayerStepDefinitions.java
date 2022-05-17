@@ -2,48 +2,31 @@ package step_definitions;
 
 import Model.Asteroid;
 import Model.Map;
-import Model.Materials.*;
+import Model.Materials.BillOfMaterial;
+import Model.Materials.Coal;
+import Model.Materials.Material;
+import Model.Materials.Uranium;
 import Model.PlayerShip;
-import Model.Sector;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import java.util.ArrayList;
-import java.util.Random;
+
+import static step_definitions.AsteroidStepDefinitions.asteroid;
+import static step_definitions.AsteroidStepDefinitions.map;
+import static step_definitions.AsteroidStepDefinitions.loweredShellNumbers;
 
 public class PlayerStepDefinitions {
-    Map map = new Map();
-    PlayerShip playerShip = null;
-    Asteroid asteroid = null;
-    Sector sector = new Sector(map.GetNewUID(), map);
+
+    static PlayerShip playerShip = null;
     boolean lastMineSuccessfull;
-    boolean loweredShellNumbers;
+
 
     @Given("I have a player")
     public void iHaveAPlayer(){
         playerShip = new PlayerShip(map);
-    }
-
-    @And("I have an asteroid")
-    public void iHaveAnAsteroid() {
-        /*
-        asteroid = new Asteroid(map.GetNewUID());
-        int originalShells = asteroid.GetShell();
-        asteroid.SetShell(0);
-        asteroid.SetCore(new Coal(map));
-        asteroid.SetShell(originalShells);
-         */
-
-        asteroid = new Asteroid(sector, new Coal(map), new Random().nextInt(6)+4);
-    }
-
-    @And("Asteroid has a core")
-    public void asteroidHasACore() {
-        /*
-        Asteroid has a shell by default
-         */
     }
 
     @And("Player stands on asteroid")
@@ -71,10 +54,6 @@ public class PlayerStepDefinitions {
         }
     }
 
-    @And("Asteroid has {int} shells")
-    public void asteroidHasShells(int arg0) {
-        asteroid.SetShell(arg0);
-    }
 
     @And("Player has place in backpack")
     public void playerHasPlaceInBackpack() {
@@ -107,16 +86,6 @@ public class PlayerStepDefinitions {
         }
     }
 
-    @And("Asteroid has not got a core")
-    public void asteroidHasNotGotACore() {
-        asteroid.Evaporate(); // Wasn't written for this, but works!
-    }
-
-    @And("Asteroid has more than {int} shells")
-    public void asteroidHasMoreThanShells(int arg0) {
-        asteroid.SetShell(arg0 + 1);
-    }
-
     @When("Player drills")
     public void playerDrills() {
         int previousShellNumbers = asteroid.GetShell();
@@ -124,80 +93,71 @@ public class PlayerStepDefinitions {
         loweredShellNumbers = previousShellNumbers != asteroid.GetShell();
     }
 
-    @Then("Asteroid should have less shells")
-    public void asteroidShouldHaveLessShells() {
-        if (loweredShellNumbers) {
-            System.out.println("Asteroid has got fewer shells");
-        } else {
-            System.out.println("Asteroid has the same number of shells");
-        }
+    @And("Player has {int} Iron in backpack")
+    public void playerHasIronInBackpack(int arg0) {
     }
 
-    @Then("Asteroid should have {int} shell")
-    public void asteroidShouldHaveShell(int arg0) {
-        if (asteroid.GetShell() == arg0) {
-            System.out.println("Asteroid has the right number of shells");
-        } else {
-            System.out.println("Asteroid does not have the right number of shells");
-        }
+    @And("Player has {int} Coal in backpack")
+    public void playerHasCoalInBackpack(int arg0) {
     }
 
-    @And("Asteroid has {int} shell")
-    public void asteroidHasShell(int arg0) {
-        asteroidHasShells(arg0);
+    @And("Player has {int} Ice in backpack")
+    public void playerHasIceInBackpack(int arg0) {
     }
 
-    @And("Asteroid is close to sun")
-    public void asteroidIsCloseToSun() {
-        asteroid.setX(0);
-        asteroid.setY(0);
+    @And("Player has {int} Uranium in backpack")
+    public void playerHasUraniumInBackpack(int arg0) {
     }
 
-    @And("Asteroid has an Uranium Core")
-    public void asteroidHasAnUraniumCore() {
-        int originalShells = asteroid.GetShell();
-        asteroid.SetShell(0);
-        asteroid.SetCore(new Uranium(map));
-        asteroid.SetShell(originalShells);
+    @When("Player creates a teleport")
+    public void playerCreatesATeleport() {
     }
 
-    public void MaterialTurnOver(Uranium uranium) {
-        uranium.TurnOver();
-        System.out.println("uranium");
+    @Then("Player should have created {int} teleport")
+    public void playerShouldHaveCreatedTeleport(int arg0) {
     }
 
-    public void MaterialTurnOver(Material material) {
-        /* No operation */
-        System.out.println("material");
+    @Then("Player should not have created {int} teleport")
+    public void playerShouldNotHaveCreatedTeleport(int arg0) {
     }
 
-    @Then("Uranium has been exposed one more time")
-    public void uraniumHasBeenExposedOneMoreTime() {
-        MaterialTurnOver(asteroid.GetCore());
-        System.out.println(asteroid.GetCore());
-        /* Fixit */
+    @When("Player creates a robot")
+    public void playerCreatesARobot() {
     }
 
-    @And("Asteroid has an ice Core")
-    public void asteroidHasAnIceCore() {
-        int originalShells = asteroid.GetShell();
-        boolean playerStandsOnAsteroid = false;
-        if (playerShip.getAsteroid() != null) {
-            playerStandsOnAsteroid = true;
-        }
-
-        asteroid = new Asteroid(sector, new Ice(map), originalShells);
-        if (playerStandsOnAsteroid) {
-            playerShip.setAsteroid(asteroid);
-        }
+    @Then("I should have a robot")
+    public void iShouldHaveARobot() {
     }
 
-    @And("Ice should have evaporated")
-    public void iceShouldHaveEvaporated() {
-        if (asteroid.GetCore() == null) {
-            System.out.println("Asteroid has not got a core");
-        } else {
-            System.out.println("Asteroid has a core");
-        }
+    @Then("I should not have a robot")
+    public void iShouldNotHaveARobot() {
+    }
+
+    @And("Player has {int} teleport")
+    public void playerHasTeleport(int arg0) {
+    }
+
+    @When("Player puts down teleport")
+    public void playerPutsDownTeleport() {
+    }
+
+    @When("Player moves")
+    public void playerMoves() {
+    }
+
+    @Then("Player should stand on the neighboring asteroid")
+    public void playerShouldStandOnTheNeighboringAsteroid() {
+    }
+
+    @Then("Player should not stand on the neighboring asteroid")
+    public void playerShouldNotStandOnTheNeighboringAsteroid() {
+    }
+
+    @Then("Player should stand on the neighboring teleports pair")
+    public void playerShouldStandOnTheNeighboringTeleportsPair() {
+    }
+
+    @Then("Player should have not moved")
+    public void playerShouldHaveNotMoved() {
     }
 }
