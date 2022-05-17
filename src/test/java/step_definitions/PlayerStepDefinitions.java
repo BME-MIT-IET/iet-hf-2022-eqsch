@@ -7,10 +7,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 import java.util.ArrayList;
 import java.util.Random;
 
+import static org.junit.Assert.*;
 import static step_definitions.AsteroidStepDefinitions.*;
 
 public class PlayerStepDefinitions {
@@ -37,43 +39,34 @@ public class PlayerStepDefinitions {
 
     @Then("Player should have mined a mineral")
     public void playerShouldHaveMinedAMineral() {
-        if (playerShip.getMaterials().size() > 0) {
-            System.out.println("Player mines successfully");
-        } else {
-            System.out.println("Player could not mine successfully");
-        }
+        Assert.assertNotEquals(0,playerShip.getMaterials().size() );
     }
 
 
     @And("Player has place in backpack")
     public void playerHasPlaceInBackpack() {
-        ArrayList<Material> materials = playerShip.getMaterials();
-        BillOfMaterial bom = new BillOfMaterial();
-        for (Material material : materials) {
-            bom.Add(material);
+        if (playerShip.getMaterials().size()>9){
+            playerShip.getMaterials().remove(0);
         }
-        playerShip.Remove(bom);
     }
 
     @And("Player has no place in backpack")
     public void playerHasNoPlaceInBackpack() {
-        Asteroid originalAsteroid = playerShip.getAsteroid();
-        for (int i = 0; i < 10; ++i) {
-            Asteroid tempAsteroid = new Asteroid(map.GetNewUID());
-            tempAsteroid.SetCore(new Coal(map));
-            playerShip.setAsteroid(tempAsteroid);
-            playerShip.Mine();
-        }
-        playerShip.setAsteroid(originalAsteroid);
+        playerShip.getMaterials().add(new Coal(1));
+        playerShip.getMaterials().add(new Coal(2));
+        playerShip.getMaterials().add(new Coal(3));
+        playerShip.getMaterials().add(new Coal(4));
+        playerShip.getMaterials().add(new Coal(5));
+        playerShip.getMaterials().add(new Coal(6));
+        playerShip.getMaterials().add(new Coal(7));
+        playerShip.getMaterials().add(new Coal(8));
+        playerShip.getMaterials().add(new Coal(9));
+        playerShip.getMaterials().add(new Coal(0));
     }
 
     @Then("Player should have mined nothing")
     public void playerShouldHaveMinedNothing() {
-        if (lastMineSuccessful) {
-            System.out.println("Player mine successfully");
-        } else {
-            System.out.println("Player could not mine successfully");
-        }
+        Assert.assertTrue(!lastMineSuccessful);
     }
 
     @When("Player drills")
@@ -85,46 +78,34 @@ public class PlayerStepDefinitions {
 
     @And("Player has {int} Iron in backpack")
     public void playerHasIronInBackpack(int arg0) {
-        Asteroid originalAsteroid = playerShip.getAsteroid();
         for (int i = 0; i < arg0; ++i) {
-            Asteroid tempAsteroid = new Asteroid(sector, new Iron(map), 0);
-            playerShip.setAsteroid(tempAsteroid);
-            playerShip.Drill();
+            Iron iron=new Iron(i);;
+            playerShip.getMaterials().add(iron);
         }
-        playerShip.setAsteroid(originalAsteroid);
     }
 
     @And("Player has {int} Coal in backpack")
     public void playerHasCoalInBackpack(int arg0) {
-        Asteroid originalAsteroid = playerShip.getAsteroid();
         for (int i = 0; i < arg0; ++i) {
-            Asteroid tempAsteroid = new Asteroid(sector, new Coal(map), 0);
-            playerShip.setAsteroid(tempAsteroid);
-            playerShip.Drill();
+            Coal coal=new Coal(i);;
+            playerShip.getMaterials().add(coal);
         }
-        playerShip.setAsteroid(originalAsteroid);
     }
 
     @And("Player has {int} Ice in backpack")
     public void playerHasIceInBackpack(int arg0) {
-        Asteroid originalAsteroid = playerShip.getAsteroid();
         for (int i = 0; i < arg0; ++i) {
-            Asteroid tempAsteroid = new Asteroid(sector, new Ice(map), 0);
-            playerShip.setAsteroid(tempAsteroid);
-            playerShip.Drill();
+            Ice ice=new Ice(i);;
+            playerShip.getMaterials().add(ice);
         }
-        playerShip.setAsteroid(originalAsteroid);
     }
 
     @And("Player has {int} Uranium in backpack")
     public void playerHasUraniumInBackpack(int arg0) {
-        Asteroid originalAsteroid = playerShip.getAsteroid();
         for (int i = 0; i < arg0; ++i) {
-            Asteroid tempAsteroid = new Asteroid(sector, new Uranium(map), 0);
-            playerShip.setAsteroid(tempAsteroid);
-            playerShip.Drill();
+            Uranium uranium=new Uranium(i);;
+            playerShip.getMaterials().add(uranium);
         }
-        playerShip.setAsteroid(originalAsteroid);
     }
 
     @When("Player creates a teleport")
@@ -135,20 +116,12 @@ public class PlayerStepDefinitions {
 
     @Then("Player should have created {int} teleport")
     public void playerShouldHaveCreatedTeleport(int arg0) {
-        if (numberOfTeleportsBeforeCrafting+arg0 == playerShip.getTeleports().size()) {
-            System.out.println("Player has created " + arg0 + " teleports");
-        } else {
-            System.out.println("Player has not created " + arg0 + " teleports");
-        }
+        Assert.assertEquals(arg0, playerShip.getTeleports().size());
     }
 
     @Then("Player should not have created {int} teleport")
     public void playerShouldNotHaveCreatedTeleport(int arg0) {
-        if (playerShip.getTeleports().size() - numberOfTeleportsBeforeCrafting != arg0) {
-            System.out.println("Player has not created " + arg0 + " teleports");
-        } else {
-            System.out.println("Player has created " + arg0 + " teleports, but it shouldn't have been able to");
-        }
+        assertEquals(numberOfTeleportsBeforeCrafting, playerShip.getTeleports().size());
     }
 
     @When("Player creates a robot")

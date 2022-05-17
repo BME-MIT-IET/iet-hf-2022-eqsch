@@ -135,8 +135,10 @@ public class Asteroid extends Field {
         }
         if(shell == 0 && core == null){
             core = m;
-            if(this.getSunClose()){
-                core.DrilledThroughSunClose(this);
+            if (core!=null){
+                if(this.getSunClose()){
+                    core.DrilledThroughSunClose(this);
+                }
             }
             return true;
         }
@@ -180,7 +182,7 @@ public class Asteroid extends Field {
         shell--;
         // if shell size is zero then checks whether it is in sun close area
         if(shell==0){
-            if (this.getSunClose()) {
+            if (this.getSunClose()&&core!=null) {
                 core.DrilledThroughSunClose(this);
             }
         }

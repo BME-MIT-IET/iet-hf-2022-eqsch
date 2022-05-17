@@ -9,6 +9,7 @@ import Model.Materials.Uranium;
 import Model.Sector;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 
 import java.util.Random;
 
@@ -21,19 +22,9 @@ public class AsteroidStepDefinitions {
     static Sector sector = new Sector(map.GetNewUID(), map);
     static boolean loweredShellNumbers;
 
-    public void MaterialTurnOver(Uranium uranium) {
-        uranium.TurnOver();
-        System.out.println("uranium");
-    }
-
-    public void MaterialTurnOver(Material material) {
-        /* No operation */
-        System.out.println("material");
-    }
-
     @And("Asteroid has not got a core")
     public void asteroidHasNotGotACore() {
-        asteroid.Evaporate(); // Wasn't written for this, but works!
+        asteroid.SetCore(null);
     }
 
     @And("Asteroid has more than {int} shells")
@@ -44,44 +35,24 @@ public class AsteroidStepDefinitions {
 
     @And("Asteroid has an ice Core")
     public void asteroidHasAnIceCore() {
-        int originalShells = asteroid.GetShell();
-        boolean playerStandsOnAsteroid = playerShip.getAsteroid() != null;
-
-        asteroid = new Asteroid(sector, new Ice(map), originalShells);
-        if (playerStandsOnAsteroid) {
-            playerShip.setAsteroid(asteroid);
-        }
+        Ice ice =new Ice(map.GetNewUID());
+        asteroid.SetCore(ice);
     }
 
     @And("Ice should have evaporated")
     public void iceShouldHaveEvaporated() {
-        if (asteroid.GetCore() == null) {
-            System.out.println("Asteroid has not got a core");
-        } else {
-            System.out.println("Asteroid has a core");
-        }
+        Assert.assertTrue(asteroid.GetCore()==null);
     }
 
     @Then("Uranium has been exposed one more time")
     public void uraniumHasBeenExposedOneMoreTime() {
-        MaterialTurnOver(asteroid.GetCore());
-        System.out.println(asteroid.GetCore());
+        Assert.assertNotEquals(0, ((Uranium) asteroid.GetCore()).getExposedFor());
     }
 
     @And("Asteroid has an Uranium Core")
     public void asteroidHasAnUraniumCore() {
-        int originalShells = asteroid.GetShell();
-        boolean playerStandsOnAsteroid = playerShip.getAsteroid() != null;
-
-        asteroid = new Asteroid(sector, new Uranium(map), originalShells);
-        if (playerStandsOnAsteroid) {
-            playerShip.setAsteroid(asteroid);
-        }
-    }
-
-    @And("Asteroid has {int} shell")
-    public void asteroidHasShell(int arg0) {
-        asteroidHasShells(arg0);
+        Uranium uranium=new Uranium(1);
+        asteroid.SetCore(uranium);
     }
 
     @And("Asteroid has {int} shells")
@@ -91,27 +62,18 @@ public class AsteroidStepDefinitions {
 
     @And("Asteroid has a core")
     public void asteroidHasACore() {
-        /*
-        Asteroid has a shell by default
-         */
+        Coal coal =new Coal(map.GetNewUID());
+        asteroid.SetCore(coal);
     }
 
     @Then("Asteroid should have less shells")
     public void asteroidShouldHaveLessShells() {
-        if (loweredShellNumbers) {
-            System.out.println("Asteroid has got fewer shells");
-        } else {
-            System.out.println("Asteroid has the same number of shells");
-        }
+        Assert.assertTrue(loweredShellNumbers);
     }
 
     @Then("Asteroid should have {int} shell")
     public void asteroidShouldHaveShell(int arg0) {
-        if (asteroid.GetShell() == arg0) {
-            System.out.println("Asteroid has the right number of shells");
-        } else {
-            System.out.println("Asteroid does not have the right number of shells");
-        }
+        Assert.assertEquals(arg0, asteroid.GetShell());
     }
 
     @And("Asteroid is close to sun")
@@ -122,7 +84,7 @@ public class AsteroidStepDefinitions {
 
     @And("I have an asteroid")
     public void iHaveAnAsteroid() {
-        asteroid = new Asteroid(sector, new Coal(map), new Random().nextInt(6)+4);
+        asteroid = new Asteroid(sector, null, new Random().nextInt(6)+4);
     }
 
     @Then("Asteroid should not have neighboring teleport")

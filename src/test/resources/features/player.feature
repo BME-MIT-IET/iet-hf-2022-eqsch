@@ -55,9 +55,10 @@ Feature: Player
   Scenario: 31. PS drills - shell = 1, close, uranium.ExposedFor++
     Given I have a player
     And I have an asteroid
-    And Asteroid has 1 shell
+    And Asteroid has 0 shells
     And Asteroid is close to sun
     And Asteroid has an Uranium Core
+    And Asteroid has 1 shells
     And Player stands on asteroid
     When Player drills
     Then Asteroid should have less shells
@@ -66,7 +67,7 @@ Feature: Player
   Scenario: 33. PS drills - shell = 1, close, ice evaporates
     Given I have a player
     And I have an asteroid
-    And Asteroid has 1 shell
+    And Asteroid has 1 shells
     And Asteroid is close to sun
     And Asteroid has an ice Core
     And Player stands on asteroid

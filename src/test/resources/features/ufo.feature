@@ -11,7 +11,7 @@ Feature: Ufo
 
 
   Scenario: 5. UFO mines - shell = 0, empty
-    Given I have a ufo
+    Given I have an ufo
     And I have an asteroid
     And Asteroid has 0 shells
     And Asteroid has not got a core
@@ -20,7 +20,7 @@ Feature: Ufo
     Then Ufo should have mined nothing
 
   Scenario: 7. UFO mines - shell > 0
-    Given I have a ufo
+    Given I have an ufo
     And I have an asteroid
     And Asteroid has more than 0 shells
     And Ufo stands on asteroid
@@ -28,15 +28,15 @@ Feature: Ufo
     Then Ufo should have mined nothing
 
   Scenario: 25. UFO moves to asteroid - has neighbour
-    Given I have a ufo
+    Given I have an ufo
     And I have an asteroid
     And Ufo stands on asteroid
     And Asteroid has a neighboring asteroid
     When Ufo moves
-    Then PUfo should stand on the neighboring asteroid
+    Then Ufo should stand on the neighboring asteroid
 
   Scenario: 28. UFO moves to asteroid - doesnt have neighbour
-    Given I have a ufo
+    Given I have an ufo
     And I have an asteroid
     And Ufo stands on asteroid
     And Asteroid doesnt have neighboring asteroid
@@ -44,7 +44,7 @@ Feature: Ufo
     Then Ufo should not stand on the neighboring asteroid
 
   Scenario: 31. UFO moves to teleport - pair is active
-    Given I have a ufo
+    Given I have an ufo
     And I have an asteroid
     And Player stands on asteroid
     And Asteroid has a neighboring teleport
@@ -53,7 +53,7 @@ Feature: Ufo
     Then Ufo should stand on the neighboring teleports pair
 
   Scenario: 34. UFO moves to teleport - pair is not active
-    Given I have a ufo
+    Given I have an ufo
     And I have an asteroid
     And Ufo stands on asteroid
     And Asteroid has a neighboring teleport

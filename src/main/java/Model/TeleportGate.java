@@ -23,6 +23,10 @@ public class TeleportGate extends Field{
      */
     private boolean WashHitByStorm;
 
+    public void setPair(TeleportGate teleportGate){
+        pair= teleportGate;
+    }
+
 
     TeleportGate(Sector s){
         super(s);
