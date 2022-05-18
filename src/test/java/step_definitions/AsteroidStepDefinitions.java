@@ -1,19 +1,17 @@
 package step_definitions;
 
-import Model.Asteroid;
-import Model.Map;
+import Model.*;
 import Model.Materials.Coal;
 import Model.Materials.Ice;
 import Model.Materials.Material;
 import Model.Materials.Uranium;
-import Model.Sector;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 import java.util.Random;
 
-import static step_definitions.PlayerStepDefinitions.playerShip;
+import static step_definitions.TeleportStepDefinitions.teleportGate;
 
 public class AsteroidStepDefinitions {
 
@@ -26,12 +24,6 @@ public class AsteroidStepDefinitions {
     public void asteroidHasNotGotACore() {
         asteroid.SetCore(null);
     }
-
-    @And("Asteroid has more than {int} shells")
-    public void asteroidHasMoreThanShells(int arg0) {
-        asteroid.SetShell(arg0 + 1);
-    }
-
 
     @And("Asteroid has an ice Core")
     public void asteroidHasAnIceCore() {
@@ -46,6 +38,7 @@ public class AsteroidStepDefinitions {
 
     @Then("Uranium has been exposed one more time")
     public void uraniumHasBeenExposedOneMoreTime() {
+        ((Uranium)asteroid.GetCore()).TurnOver();
         Assert.assertNotEquals(0, ((Uranium) asteroid.GetCore()).getExposedFor());
     }
 
@@ -89,24 +82,39 @@ public class AsteroidStepDefinitions {
 
     @Then("Asteroid should not have neighboring teleport")
     public void asteroidShouldNotHaveNeighboringTeleport() {
+        boolean teleport=false;
+        for (Field field:asteroid.getNeighbours()) {
+            if (field.getClass()== TeleportGate.class){
+                teleport=true;
+            }
+        }
+        Assert.assertTrue(!teleport);
     }
 
     @Then("Asteroid should have neighboring teleport")
     public void asteroidShouldHaveNeighboringTeleport() {
-        
+        boolean teleport=false;
+        for (Field field:asteroid.getNeighbours()) {
+            if (field.getClass()== TeleportGate.class){
+                teleport=true;
+            }
+        }
+        Assert.assertTrue(teleport);
     }
 
     @And("Asteroid has a neighboring asteroid")
     public void asteroidHasANeighboringAsteroid() {
-        
+        asteroid.getNeighbours().add(new Asteroid(map.GetNewUID()));
     }
 
     @And("Asteroid doesnt have neighboring asteroid")
     public void asteroidDoesntHaveNeighboringAsteroid() {
-        
+        asteroid.getNeighbours().clear();
     }
 
     @And("Asteroid has a neighboring teleport")
     public void asteroidHasANeighboringTeleport() {
+        asteroid.getNeighbours().add(new TeleportGate(map.GetNewUID()));
+        teleportGate.getNeighbours().add(asteroid);
     }
 }

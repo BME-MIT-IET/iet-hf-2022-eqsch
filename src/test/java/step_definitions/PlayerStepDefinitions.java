@@ -1,8 +1,7 @@
 package step_definitions;
 
-import Model.Asteroid;
+import Model.*;
 import Model.Materials.*;
-import Model.PlayerShip;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -131,37 +130,61 @@ public class PlayerStepDefinitions {
 
     @Then("I should have a robot")
     public void iShouldHaveARobot() {
+        boolean robot=false;
+        for (Ship ship:asteroid.getShips()) {
+            if (ship.getClass()== RobotShip.class){
+                robot=true;
+            }
+        }
+        Assert.assertTrue(robot);
     }
 
     @Then("I should not have a robot")
     public void iShouldNotHaveARobot() {
+        boolean robot=false;
+        for (Ship ship:asteroid.getShips()) {
+            if (ship.getClass()== RobotShip.class){
+                robot=true;
+            }
+        }
+        Assert.assertTrue(!robot);
     }
 
     @And("Player has {int} teleport")
     public void playerHasTeleport(int arg0) {
+        for (int i=0; i<arg0; i++){
+            TeleportGate teleportGate = new TeleportGate(map.GetNewUID());
+            playerShip.getTeleports().add(teleportGate);
+        }
     }
 
     @When("Player puts down teleport")
     public void playerPutsDownTeleport() {
+        playerShip.PutDown(playerShip.getTeleports().get(0));
     }
 
     @When("Player moves")
     public void playerMoves() {
+        playerShip.Move(playerShip.getAsteroid().getNeighbours().get(0));
     }
 
     @Then("Player should stand on the neighboring asteroid")
     public void playerShouldStandOnTheNeighboringAsteroid() {
+        Assert.assertEquals(asteroid.getNeighbours().get(0).GetUID(), playerShip.getAsteroid().GetUID());
     }
 
     @Then("Player should not stand on the neighboring asteroid")
     public void playerShouldNotStandOnTheNeighboringAsteroid() {
+        Assert.assertEquals(asteroid.GetUID(), playerShip.getAsteroid().GetUID());
     }
 
     @Then("Player should stand on the neighboring teleports pair")
     public void playerShouldStandOnTheNeighboringTeleportsPair() {
+        Assert.assertEquals(((TeleportGate)asteroid.getNeighbours().get(0)).getPair().getNeighbours().get(0).GetUID(), playerShip.getAsteroid().GetUID());
     }
 
     @Then("Player should have not moved")
     public void playerShouldHaveNotMoved() {
+        Assert.assertEquals(asteroid.GetUID(), playerShip.getAsteroid().GetUID());
     }
 }

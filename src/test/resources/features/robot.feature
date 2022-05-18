@@ -3,8 +3,8 @@ Feature: Robot
 Scenario: 28. RS drills - shell >= 1
 Given I have a Robot
 And I have an asteroid
-And Asteroid has more than 0 shells
-And Robot stands on asteroid
+  And Robot stands on asteroid
+And Asteroid has 3 shells
 When Robot drills
 Then Asteroid should have less shells
 
@@ -17,26 +17,27 @@ When Robot drills
 Then Asteroid should have 0 shell
 
 Scenario: 32. RS drills - shell = 1, close, uranium.ExposedFor++
-Given I have a Robot
-And I have an asteroid
-And Asteroid has 1 shell
-And Asteroid is close to sun
-And Asteroid has an Uranium Core
-And Robot stands on asteroid
-When Robot drills
-Then Asteroid should have less shells
-And Uranium has been exposed one more time
+  Given I have a Robot
+  And I have an asteroid
+  And Robot stands on asteroid
+  And Asteroid has 0 shells
+  And Asteroid has an Uranium Core
+  And Asteroid has 1 shells
+  And Asteroid is close to sun
+  When Robot drills
+  Then Asteroid should have less shells
+  And Uranium has been exposed one more time
 
 Scenario: 34. RS drills - shell = 1, close, ice evaporates
-Given I have a Robot
-And I have an asteroid
-And Asteroid has 1 shell
-And Asteroid is close to sun
-And Asteroid has an ice Core
-And Robot stands on asteroid
-When Robot drills
-Then Asteroid should have less shells
-And Ice should have evaporated
+  Given I have a Robot
+  And I have an asteroid
+  And Robot stands on asteroid
+  And Asteroid has 1 shells
+  And Asteroid is close to sun
+  And Asteroid has an ice Core
+  When Robot drills
+  Then Asteroid should have less shells
+  And Ice should have evaporated
 
   Scenario: 24. RS moves to asteroid - has neighbour
     Given I have a Robot

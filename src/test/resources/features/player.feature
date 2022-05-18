@@ -31,7 +31,7 @@ Feature: Player
   Scenario: 6. PS mines - shell > 0
     Given I have a player
     And I have an asteroid
-    And Asteroid has more than 0 shells
+    And Asteroid has 2 shells
     And Player stands on asteroid
     When Player mines
     Then Player should have mined nothing
@@ -39,7 +39,7 @@ Feature: Player
   Scenario: 27. PS drills - shell >= 1
     Given I have a player
     And I have an asteroid
-    And Asteroid has more than 0 shells
+    And Asteroid has 2 shells
     And Player stands on asteroid
     When Player drills
     Then Asteroid should have less shells
@@ -56,9 +56,9 @@ Feature: Player
     Given I have a player
     And I have an asteroid
     And Asteroid has 0 shells
-    And Asteroid is close to sun
     And Asteroid has an Uranium Core
     And Asteroid has 1 shells
+    And Asteroid is close to sun
     And Player stands on asteroid
     When Player drills
     Then Asteroid should have less shells
@@ -77,6 +77,8 @@ Feature: Player
 
     Scenario: 8. PS crafting teleport - enough materials, enough space
       Given I have a player
+      And I have an asteroid
+      And Player stands on asteroid
       And Player has 2 Iron in backpack
       And Player has 1 Coal in backpack
       And Player has 1 Ice in backpack
@@ -87,9 +89,9 @@ Feature: Player
 
   Scenario: 9. PS crafting teleport - enough materials, not enough space
     Given I have a player
+    And I have an asteroid
+    And Player stands on asteroid
     And Player has 2 Iron in backpack
-    And Player has 1 Coal in backpack
-    And Player has 1 Ice in backpack
     And Player has 1 Uranium in backpack
     And Player has no place in backpack
     When Player creates a teleport
@@ -97,12 +99,15 @@ Feature: Player
 
   Scenario: 10. PS crafting teleport - not enough materials
     Given I have a player
+
     And Player has 2 Iron in backpack
     When Player creates a teleport
     Then Player should not have created 2 teleport
 
   Scenario: 11. PS crafting robot - enough materials
     Given I have a player
+    And I have an asteroid
+    And Player stands on asteroid
     And Player has 1 Iron in backpack
     And Player has 1 Coal in backpack
     And Player has 1 Uranium in backpack

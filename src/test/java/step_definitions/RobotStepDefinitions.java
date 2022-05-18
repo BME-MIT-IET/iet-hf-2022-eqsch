@@ -15,7 +15,7 @@ public class RobotStepDefinitions {
 
     @Given("I have a Robot")
     public void iHaveARobot() {
-        robotShip=new RobotShip(asteroid);
+        robotShip=new RobotShip(map.GetNewUID());
     }
 
     @And("Robot stands on asteroid")
@@ -25,12 +25,17 @@ public class RobotStepDefinitions {
 
     @When("Robot drills")
     public void robotDrills() {
+        int previousShellNumbers = asteroid.GetShell();
         robotShip.Drill();
+        loweredShellNumbers = previousShellNumbers != asteroid.GetShell();
     }
 
     @When("Robot moves")
     public void robotMoves() {
-        robotShip.Move(asteroid.getNeighbours().get(0));
+        if (asteroid.getNeighbours().size()!=0){
+            robotShip.Move(asteroid.getNeighbours().get(0));
+        }
+
     }
 
     @Then("Robot should stand on the neighboring asteroid")
@@ -40,7 +45,7 @@ public class RobotStepDefinitions {
 
     @Then("Robot should not stand on the neighboring asteroid")
     public void robotShouldNotStandOnTheNeighboringAsteroid() {
-        Assert.assertNotEquals(asteroid.getNeighbours().get(0).GetUID(), robotShip.getAsteroid().GetUID());
+        Assert.assertEquals(asteroid.GetUID(), robotShip.getAsteroid().GetUID());
     }
 
     @Then("Robot should stand on the neighboring teleports pair")

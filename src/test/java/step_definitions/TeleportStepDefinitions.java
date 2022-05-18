@@ -5,7 +5,7 @@ import Model.TeleportGate;
 import io.cucumber.java.en.And;
 
 public class TeleportStepDefinitions {
-    TeleportGate teleportGate=new TeleportGate(0);
+    static TeleportGate teleportGate=new TeleportGate(0);
     @And("Teleport is active")
     public void teleportIsActive() {
         TeleportGate pair =new TeleportGate(1);
