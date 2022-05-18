@@ -6,11 +6,13 @@ import Model.Materials.Ice;
 import Model.Materials.Material;
 import Model.Materials.Uranium;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 import java.util.Random;
 
+import static step_definitions.PlayerStepDefinitions.playerShip;
 import static step_definitions.TeleportStepDefinitions.teleportGate;
 
 public class AsteroidStepDefinitions {
@@ -44,7 +46,7 @@ public class AsteroidStepDefinitions {
 
     @And("Asteroid has an Uranium Core")
     public void asteroidHasAnUraniumCore() {
-        Uranium uranium=new Uranium(1);
+        Uranium uranium=new Uranium(map.GetNewUID());
         asteroid.SetCore(uranium);
     }
 
@@ -114,7 +116,30 @@ public class AsteroidStepDefinitions {
 
     @And("Asteroid has a neighboring teleport")
     public void asteroidHasANeighboringTeleport() {
-        asteroid.getNeighbours().add(new TeleportGate(map.GetNewUID()));
-        teleportGate.getNeighbours().add(asteroid);
+        TeleportGate tempTeleport = new TeleportGate(map.GetNewUID());
+        TeleportGate tempTeleport2 = new TeleportGate(map.GetNewUID());
+
+        tempTeleport.setPair(tempTeleport2);
+        tempTeleport2.setPair(tempTeleport);
+
+        if (playerShip == null)
+            playerShip = new PlayerShip(asteroid);
+        playerShip.getTeleports().add(tempTeleport);
+        playerShip.getTeleports().add(tempTeleport2);
+
+        tempTeleport2.SetSector(sector);
+        asteroid.getSector().Add(tempTeleport2);
+        asteroid.AddNeighbour(tempTeleport2);
+        tempTeleport2.AddNeighbour(asteroid);
+        tempTeleport2.Reposition();
+
+        playerShip.PutDown(tempTeleport);
+        //asteroid.AddNeighbour(new TeleportGate(map.GetNewUID()));
+        //teleportGate.AddNeighbour(asteroid);
+    }
+
+    @And("Asteroid has more than {int} shells")
+    public void asteroidHasMoreThanShells(int arg0) {
+        asteroidHasShells(arg0 + 1);
     }
 }

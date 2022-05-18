@@ -116,6 +116,8 @@ Feature: Player
 
   Scenario: 12. PS crafting robot - not enough materials
     Given I have a player
+    And I have an asteroid
+    And Player stands on asteroid
     And Player has 1 Iron in backpack
     When Player creates a robot
     Then I should not have a robot

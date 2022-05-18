@@ -13,7 +13,7 @@ import static step_definitions.AsteroidStepDefinitions.*;
 public class UfoStepDefinitions {
 
     UFO ufo;
-    @Given("I have an ufo")
+    @And("I have an ufo")
     public void iHaveAnUfo() {
         ufo= new UFO(asteroid);
     }
@@ -44,7 +44,8 @@ public class UfoStepDefinitions {
 
     @When("Ufo moves")
     public void ufoMoves() {
-        ufo.Move(asteroid.getNeighbours().get(0));
+        if (asteroid.getNeighbours().size()>0)
+            ufo.Move(asteroid.getNeighbours().get(0));
     }
 
     @Then("Ufo should stand on the neighboring asteroid")
@@ -54,7 +55,10 @@ public class UfoStepDefinitions {
 
     @Then("Ufo should not stand on the neighboring asteroid")
     public void ufoShouldNotStandOnTheNeighboringAsteroid() {
-        Assert.assertNotEquals(asteroid.getNeighbours().get(0).GetUID(), ufo.getAsteroid().GetUID());
+        if (asteroid.getNeighbours().size()>0)
+            Assert.assertNotEquals(asteroid.getNeighbours().get(0).GetUID(), ufo.getAsteroid().GetUID());
+        else
+            Assert.assertNotEquals(null, ufo.getAsteroid().GetUID());
     }
 
     @Then("Ufo should stand on the neighboring teleports pair")

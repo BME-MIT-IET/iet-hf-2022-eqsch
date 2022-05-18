@@ -160,12 +160,14 @@ public class PlayerStepDefinitions {
 
     @When("Player puts down teleport")
     public void playerPutsDownTeleport() {
-        playerShip.PutDown(playerShip.getTeleports().get(0));
+        if (playerShip.getTeleports().size() > 0)
+            playerShip.PutDown(playerShip.getTeleports().get(0));
     }
 
     @When("Player moves")
     public void playerMoves() {
-        playerShip.Move(playerShip.getAsteroid().getNeighbours().get(0));
+        if (playerShip.getAsteroid().getNeighbours().size() > 0)
+            playerShip.Move(playerShip.getAsteroid().getNeighbours().get(0));
     }
 
     @Then("Player should stand on the neighboring asteroid")
