@@ -32,6 +32,16 @@ public class GameController {
     //the current player
     private PlayerShip CurrentPlayer;
 
+    public ArrayList<PlayerShip> getPs(){
+        return new ArrayList<>(ps);
+    }
+    public ArrayList<RobotShip> getRs(){
+        return new ArrayList<>(rs);
+    }
+    public ArrayList<UFO> getUfo(){
+        return new ArrayList<>(ufos);
+    }
+
     public void SetCurrentWorkingDirectory(String CWD){
         CurrentWorkingDirectory += CWD;
     }
@@ -95,11 +105,11 @@ public class GameController {
         }
         else if (parts[0].equals("save")){
             FileController fc = new FileController();
-            fc.Save(new File(CurrentWorkingDirectory + "\\" + parts[1]),map,this);
+            fc.Save(new File(CurrentWorkingDirectory + "/" + parts[1]),map,this);
         }
         else if(parts[0].equals("load")){
             FileController fc = new FileController();
-            map = fc.Load(new File(CurrentWorkingDirectory + "\\" + parts[1]),this);
+            map = fc.Load(new File(CurrentWorkingDirectory + "/" + parts[1]),this);
         }
         else if(parts[0].equals("controller")){
             controller = Boolean.parseBoolean(parts[1]);
@@ -179,7 +189,7 @@ public class GameController {
         }
         else if(parts[0].equals("compare")){
             FileController fc = new FileController();
-            fc.Compare(new File(CurrentWorkingDirectory + "\\" + parts[1]),new File(CurrentWorkingDirectory + "\\" + parts[2]));
+            fc.Compare(new File(CurrentWorkingDirectory + "/" + parts[1]),new File(CurrentWorkingDirectory + "/" + parts[2]));
         }
         else{
             if(parts.length < 3){
@@ -423,27 +433,6 @@ public class GameController {
             current.Move(target);
         }
         else if(command.equals("turnover")){
-            current.TurnOver();
-        }
-    }
-
-    /**
-     * It handles the uranium commands.
-     * @param UID The UID of the uranium.
-     * @param command The command what he want to do.
-     * @param Args The argument of the command:
-     * @throws InvalidCommand
-     */
-    public void UraniumDoes(int UID, String command, ArrayList<String> Args) throws InvalidCommand {
-        Uranium current = null;
-        for(Uranium it : urans){
-            if(it.GetUID() == UID){
-                current = it;
-            }
-        }
-        if(current == null)
-            throw(new InvalidCommand("U "+ UID + " " + command, Args , "-> Uranium UID not found"));
-        if(command.equals("turnover")){
             current.TurnOver();
         }
     }

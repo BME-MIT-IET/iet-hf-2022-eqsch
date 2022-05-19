@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.cucumber:datatable:3.3.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/datatable/3.3.1/42f416daccc2af23581cd51f0289f7d972c8a0bd/datatable-3.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/datatable/3.3.1/fd9c5190b1a7329f97f20310a8564893cf71c36a/datatable-3.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -25,7 +25,7 @@ public class AIController {
         int maxShell = 0;
         Asteroid maxShellAsteroid = null;
 
-        // kills itself if it is on a isolated asteroid
+        // kills itself if it is on an isolated asteroid
         if(rs.getAsteroid().getNeighbours().size() == 0)
             rs.Die();
         // drills if the shell is not destroyed

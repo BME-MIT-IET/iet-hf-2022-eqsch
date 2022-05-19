@@ -1,0 +1,30 @@
+Sector{
+UID: 4
+Fields: 1
+isClose: false
+}
+Asteroid{
+UID: 1
+X: 0.0
+Y: 0.0
+Sector: 4
+Shell: 0
+Ships: 2
+Core:3
+}
+Coal{
+UID: 3
+}
+PlayerShip{
+UID: 2
+Asteroid: 1
+}
+Controller{
+controller: true
+Order: 2
+Current: 2
+}
+Sun{
+Target: 4
+Rounds: 8
+}
