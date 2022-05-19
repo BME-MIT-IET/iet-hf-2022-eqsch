@@ -48,7 +48,8 @@ Feature: Ufo
     Given I have an ufo
     And I have a player
     And Player stands on asteroid
-    And Asteroid has a neighboring teleport
+    And I have a teleport
+    And Asteroid is neighbors with teleport
     And Teleport is active
     When Ufo moves
     Then Ufo should stand on the neighboring teleports pair
@@ -57,7 +58,8 @@ Feature: Ufo
     And I have an asteroid
     Given I have an ufo
     And Ufo stands on asteroid
-    And Asteroid has a neighboring teleport
+    And I have a teleport
+    And Asteroid is neighbors with teleport
     And Teleport is not active
     When Ufo moves
     Then Ufo should have not moved

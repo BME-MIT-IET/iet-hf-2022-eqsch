@@ -158,7 +158,8 @@ Feature: Player
     Given I have a player
     And I have an asteroid
     And Player stands on asteroid
-    And Asteroid has a neighboring teleport
+    And I have a teleport
+    And Asteroid is neighbors with teleport
     And Teleport is active
     When Player moves
     Then Player should stand on the neighboring teleports pair
@@ -167,7 +168,8 @@ Feature: Player
     Given I have a player
     And I have an asteroid
     And Player stands on asteroid
-    And Asteroid has a neighboring teleport
+    And I have a teleport
+    And Asteroid is neighbors with teleport
     And Teleport is not active
     When Player moves
     Then Player should have not moved

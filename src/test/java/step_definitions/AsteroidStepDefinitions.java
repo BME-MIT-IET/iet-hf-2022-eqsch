@@ -19,7 +19,7 @@ public class AsteroidStepDefinitions {
 
     static Asteroid asteroid;
     static Map map = new Map();
-    static Sector sector = new Sector(map.GetNewUID(), map);
+    static Sector sector;
     static boolean loweredShellNumbers;
 
     @And("Asteroid has not got a core")
@@ -35,7 +35,7 @@ public class AsteroidStepDefinitions {
 
     @And("Ice should have evaporated")
     public void iceShouldHaveEvaporated() {
-        Assert.assertTrue(asteroid.GetCore()==null);
+        Assert.assertNull(asteroid.GetCore());
     }
 
     @Then("Uranium has been exposed one more time")
@@ -79,26 +79,28 @@ public class AsteroidStepDefinitions {
 
     @And("I have an asteroid")
     public void iHaveAnAsteroid() {
-        asteroid = new Asteroid(sector, null, new Random().nextInt(6)+4);
+        asteroid = new Asteroid(new Sector(map.GetNewUID(), map), null, new Random().nextInt(6)+4);
     }
 
     @Then("Asteroid should not have neighboring teleport")
     public void asteroidShouldNotHaveNeighboringTeleport() {
         boolean teleport=false;
         for (Field field:asteroid.getNeighbours()) {
-            if (field.getClass()== TeleportGate.class){
-                teleport=true;
+            if (field.getClass() == TeleportGate.class) {
+                teleport = true;
+                break;
             }
         }
-        Assert.assertTrue(!teleport);
+        Assert.assertFalse(teleport);
     }
 
     @Then("Asteroid should have neighboring teleport")
     public void asteroidShouldHaveNeighboringTeleport() {
         boolean teleport=false;
         for (Field field:asteroid.getNeighbours()) {
-            if (field.getClass()== TeleportGate.class){
-                teleport=true;
+            if (field.getClass() == TeleportGate.class) {
+                teleport = true;
+                break;
             }
         }
         Assert.assertTrue(teleport);
@@ -114,28 +116,11 @@ public class AsteroidStepDefinitions {
         asteroid.getNeighbours().clear();
     }
 
-    @And("Asteroid has a neighboring teleport")
-    public void asteroidHasANeighboringTeleport() {
-        TeleportGate tempTeleport = new TeleportGate(map.GetNewUID());
-        TeleportGate tempTeleport2 = new TeleportGate(map.GetNewUID());
+    @And("Asteroid is neighbors with teleport")
+    public void asteroidIsNeighborsWithTeleport() {
+        asteroid.getNeighbours().add(teleportGate);
+        teleportGate.AddNeighbour(asteroid);
 
-        tempTeleport.setPair(tempTeleport2);
-        tempTeleport2.setPair(tempTeleport);
-
-        if (playerShip == null)
-            playerShip = new PlayerShip(asteroid);
-        playerShip.getTeleports().add(tempTeleport);
-        playerShip.getTeleports().add(tempTeleport2);
-
-        tempTeleport2.SetSector(sector);
-        asteroid.getSector().Add(tempTeleport2);
-        asteroid.AddNeighbour(tempTeleport2);
-        tempTeleport2.AddNeighbour(asteroid);
-        tempTeleport2.Reposition();
-
-        playerShip.PutDown(tempTeleport);
-        //asteroid.AddNeighbour(new TeleportGate(map.GetNewUID()));
-        //teleportGate.AddNeighbour(asteroid);
     }
 
     @And("Asteroid has more than {int} shells")

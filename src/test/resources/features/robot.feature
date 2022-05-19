@@ -58,8 +58,9 @@ Scenario: 34. RS drills - shell = 1, close, ice evaporates
   Scenario: 30. RS moves to teleport - pair is active
     Given I have a Robot
     And I have an asteroid
+    And I have a teleport
     And Robot stands on asteroid
-    And Asteroid has a neighboring teleport
+    And Asteroid is neighbors with teleport
     And Teleport is active
     When Robot moves
     Then Robot should stand on the neighboring teleports pair
@@ -68,7 +69,8 @@ Scenario: 34. RS drills - shell = 1, close, ice evaporates
     Given I have a Robot
     And I have an asteroid
     And Robot stands on asteroid
-    And Asteroid has a neighboring teleport
+    And I have a teleport
+    And Asteroid is neighbors with teleport
     And Teleport is not active
     When Robot moves
     Then Robot should have not moved
