@@ -15,10 +15,15 @@ dependencies {
     implementation "org.openjfx:javafx-controls:${javaFXVersion}:${javaFXPlatform}"
     implementation "org.openjfx:javafx-graphics:${javaFXVersion}:${javaFXPlatform}"
     implementation "org.openjfx:javafx-fxml:${javaFXVersion}:${javaFXPlatform}"
-    implementation 'junit:junit:4.13.1'
     testImplementation 'io.cucumber:cucumber-java:6.1.1'
     testImplementation 'io.cucumber:cucumber-java8:6.1.1'
     implementation 'junit:junit:4.12'
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }
 
 sourceSets {
@@ -53,3 +58,19 @@ private static String getJavaFXPlatform() {
     }
     return null
 }
+
+task cucumberTests() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'html:target/cucumber-report.html',
+                    'src/test/resources']
+        }
+    }
+}
+
+rootProject.tasks.getByName('build').dependsOn cucumberTests
