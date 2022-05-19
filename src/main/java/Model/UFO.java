@@ -132,4 +132,8 @@ public class UFO extends Ship{
     public void accept(IVisitor v) {
         v.visit(this);
     }
+
+    public ArrayList<Material> getMaterials() {
+        return materials;
+    }
 }

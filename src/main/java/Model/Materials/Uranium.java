@@ -15,6 +15,10 @@ public class Uranium extends Material{
     boolean isExposed;
     Asteroid LastAsteroid;
 
+    public int getExposedFor() {
+        return ExposedFor;
+    }
+
     public Uranium(Map m){
         super(m);
     }
@@ -102,4 +106,5 @@ public class Uranium extends Material{
     public void accept(IVisitor v) {
         v.visit(this);
     }
+
 }
