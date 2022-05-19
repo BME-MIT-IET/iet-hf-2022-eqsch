@@ -1,4 +1,4 @@
-# Cucumber
+# Cucumber - BDD teszt
 
 ## Részfeladat
 A Cucumbert azért választottuk, mivel már Rendszermodellezés tárgyból volt tapasztalatunk vele, bár nem indult zökkenőmentesen a tesztek írása így se. A fő probléma a gradle file-ba illesztett két sor körül voltak, mivel nehéz volt azokat összeszinkronizálni a JDK-val. 
